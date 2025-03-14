@@ -1,9 +1,7 @@
 {
-    "version": 2,
-    "builds": [{ "src": "app.js",
-     "use": "@vercel/node" }],
-    "routes": [{ "src": "/(.*)",
-     "dest": "app.js" }],
-    "env": { "MONGO_URI": "mongodb://localhost:27017/myDatabase" }
-  }
+  "version": 2,
+  "routes": [{ "src": "/(.*)", "dest": "app.js" }],
+  "env": { "MONGO_URI": "mongodb://localhost:27017/myDatabase" }
+}
+
   
