@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swasthya Kiran Services</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="service.css">
+  <link rel="stylesheet" href="output.css">
+  
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img class="t" src="../assets/images/image_2.png" alt="Swasthya Kiran Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/service">Services</a></li>
+            <li><a href="/docter">Doctors</a></li>
+            <li><a href="/haspit">Hospitals</a></li>
+            <li><a href="/about">About Us</a></li>
+            <!-- <li><a href="/signup">SignUp</a></li>
+            <li><a href="/signin">SignIn</a></li>
+            <li><a href="/otp">Otp</a></li>
+            <li><a href="./details">Details</a></li> -->
+            <!-- <img class="search-icon" src="../assets/seatch.jpeg" alt="Search"> -->
+        </ul>
+        <!-- <a href="#" class="appointment-btn">Appointment</a> -->
+        
+         <!-- Search Container -->
+         <div class="search-container">
+          <div class="search-form">
+              <input type="text" id="search-input" placeholder="Search...">
+              <button id="search-btn" onclick="performSearch()">Search</button>
+          </div>
+          <!-- <div class="search-form" style="display: none;">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button id="search-btn" onclick="performSearch()">Search</button>
+        </div> -->
+          <img class="search-icon" src="../assets/seatch.jpeg" alt="Search">
+      </div>
+
+      <!-- Appointment Button -->
+      <!-- <a href="#" class="appointment-btn">Appointment</a> -->
+  </nav>
+</header>
+
+
+  
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    
+    // Search functionality
+    const searchIcon = document.querySelector(".search-icon");
+    const searchForm = document.querySelector(".search-form");
+    const searchInput = document.getElementById("search-input");
+  
+    // Load the stored search query (if any)
+    searchInput.value = localStorage.getItem("searchQuery") || "";
+  
+    // Toggle search form visibility when clicking the search icon
+    searchIcon.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevent immediate hiding
+        searchForm.classList.toggle("active");
+        searchInput.focus();
+    });
+  
+    // Hide search form when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!searchForm.contains(event.target) && !searchIcon.contains(event.target)) {
+            searchForm.classList.remove("active");
+        }
+    });
+  
+    // Store search query in local storage
+    searchInput.addEventListener("input", function () {
+        localStorage.setItem("searchQuery", searchInput.value);
+    });
+  
+    // Function to perform search
+    function performSearch() {
+      var query = searchInput.value.trim();
+      if (query) {
+          console.log("Searching for: " + query);
+          searchInput.value = "";
+          localStorage.removeItem("searchQuery");
+      } else {
+          alert("Please enter a search term");
+      }
+    }
+  
+    // Attach search function to the button
+    document.getElementById("search-btn").addEventListener("click", performSearch);
+  
+    // Accordion functionality
+    const headers = document.querySelectorAll(".accordion-header");
+  
+    headers.forEach(header => {
+      header.addEventListener("click", function () {
+        const content = this.nextElementSibling;
+  
+        // Toggle content visibility
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+  
+        // Close other open sections
+        document.querySelectorAll(".accordion-content").forEach(otherContent => {
+          if (otherContent !== content) {
+            otherContent.style.display = "none";
+          }
+        });
+      });
+    });
+  
+    // Doctor Data
+    const doctorData = {
+    "Delhi": [
+        "Dr. Rajesh Sharma - Cardiologist", 
+        "Dr. Priya Kapoor - Dermatologist", 
+        "Dr. Arjun Mehta - Neurologist",
+        "Dr. Neeta Verma - Pediatrician",
+        "Dr. Kunal Tiwari - Orthopedic",
+        "Dr. Ananya Das - Gynecologist",
+        "Dr. Ravi Shankar - Endocrinologist",
+        "Dr. Pooja Reddy - Ophthalmologist",
+        "Dr. Alok Sinha - Pulmonologist",
+        "Dr. Radhika Nair - Radiologist"
+    ],
+    "Mumbai": [
+        "Dr. Ramesh Patel - Orthopedic",
+        "Dr. Anjali Rao - Pediatrician",
+        "Dr. Sameer Nair - Oncologist",
+        "Dr. Snehal Desai - Neurologist",
+        "Dr. Ashok Mehta - Cardiologist",
+        "Dr. Ritu Sharma - ENT Specialist",
+        "Dr. Gopal Sen - Gastroenterologist",
+        "Dr. Meera Joshi - Dermatologist",
+        "Dr. Anil Saxena - Urologist",
+        "Dr. Vandana Iyer - Rheumatologist"
+    ],
+    "Bangalore": [
+        "Dr. Sunil Kumar - Gastroenterologist",
+        "Dr. Pooja Das - Endocrinologist",
+        "Dr. Akshay Shetty - Cardiologist",
+        "Dr. Nidhi Reddy - Pulmonologist",
+        "Dr. Manish Verma - Pediatrician",
+        "Dr. Rekha Menon - Radiologist",
+        "Dr. Amit Tiwari - Orthopedic",
+        "Dr. Priyanka Mishra - Neurologist",
+        "Dr. Sanjay Gupta - Dentist",
+        "Dr. Kavita Singh - Ophthalmologist"
+    ],
+    "Chennai": [
+        "Dr. Suresh Menon - Urologist",
+        "Dr. Kiran Bhat - Rheumatologist",
+        "Dr. Deepak Nair - Cardiologist",
+        "Dr. Neha Ramesh - Pediatrician",
+        "Dr. Arvind Kumar - Dermatologist",
+        "Dr. Sneha Sundar - Gastroenterologist",
+        "Dr. Vikas Iyer - Orthopedic",
+        "Dr. Radha Pillai - Ophthalmologist",
+        "Dr. Ankur Saxena - ENT Specialist",
+        "Dr. Ranjan Roy - Neurologist"
+    ],
+    "Kolkata": [
+        "Dr. Swati Gupta - Pulmonologist",
+        "Dr. Vinod Sen - Radiologist",
+        "Dr. Ramesh Bose - Oncologist",
+        "Dr. Alka Sharma - Cardiologist",
+        "Dr. Gaurav Banerjee - Endocrinologist",
+        "Dr. Priti Mukherjee - Gynecologist",
+        "Dr. Suraj Nanda - Orthopedic",
+        "Dr. Neetu Sinha - Pediatrician",
+        "Dr. Anand Roy - Dentist",
+        "Dr. Riya Mehta - Ophthalmologist"
+    ],
+    "Hyderabad": [
+        "Dr. Mahesh Reddy - Nephrologist",
+        "Dr. Sneha Iyer - ENT Specialist",
+        "Dr. Arjun Rao - Cardiologist",
+        "Dr. Smita Kapoor - Dermatologist",
+        "Dr. Tarun Reddy - Gastroenterologist",
+        "Dr. Meenal Joshi - Pediatrician",
+        "Dr. Vikas Gupta - Pulmonologist",
+        "Dr. Anushka Sinha - Neurologist",
+        "Dr. Sandeep Kumar - Orthopedic",
+        "Dr. Rashmi Patel - Radiologist"
+    ],
+    "Pune": [
+        "Dr. Rajiv Saxena - Gynecologist",
+        "Dr. Neha Goyal - Cardiologist",
+        "Dr. Rahul Bhatia - Oncologist",
+        "Dr. Poonam Deshmukh - Dermatologist",
+        "Dr. Manish Kulkarni - Pediatrician",
+        "Dr. Ananya Verma - ENT Specialist",
+        "Dr. Saurabh Joshi - Pulmonologist",
+        "Dr. Meenakshi Iyer - Ophthalmologist",
+        "Dr. Rohit Sharma - Urologist",
+        "Dr. Kavya Rao - Neurologist"
+    ],
+    "Jaipur": [
+        "Dr. Manish Agarwal - Dentist",
+        "Dr. Priya Singh - General Physician",
+        "Dr. Tarun Sharma - Cardiologist",
+        "Dr. Nisha Verma - Pediatrician",
+        "Dr. Ramesh Joshi - Orthopedic",
+        "Dr. Sweta Kapoor - Dermatologist",
+        "Dr. Abhishek Mehta - Gastroenterologist",
+        "Dr. Anju Gupta - ENT Specialist",
+        "Dr. Vikas Saxena - Pulmonologist",
+        "Dr. Radhika Das - Ophthalmologist"
+    ]
+};
+
+  
+    // Show Doctors based on selected city
+    function showDoctors(city) {
+        document.getElementById('city-name').innerText = city;
+        let doctorList = document.getElementById('doctors');
+        doctorList.innerHTML = ""; 
+  
+        if (doctorData[city]) {
+            doctorData[city].forEach(doctor => {
+                let li = document.createElement('li');
+                li.innerText = doctor;
+                doctorList.appendChild(li);
+            });
+        } else {
+            let li = document.createElement('li');
+            li.innerText = "No doctors found for this city.";
+            doctorList.appendChild(li);
+        }
+  
+        // Show doctor list
+        document.getElementById('doctor-list').style.display = "block";
+    }
+  
+    // Handle city click and display doctors
+    const cityListItems = document.querySelectorAll('.u li');
+    cityListItems.forEach(item => {
+      item.addEventListener('click', function () {
+        const cityName = item.innerText;
+        showDoctors(cityName);
+      });
+    });
+  
+  });
+  </script>
+  
+
+
+  <section class="services">
+    <h1>Our Services</h1>
+    <p>We provide one of the best supports in medical aspects</p>
+    
+    <div class="service-cards">
+      <div class="card">
+        <div class="icon">
+          <img src="../assets/images/24-hour-medical-care-service-260nw-1547733497.webp" alt="24/7 Support">
+        </div>
+        <h3>24/7 support</h3>
+        <p>Our website provides 24/7 access to real-time information on doctor availability, bed availability, and emergency services.</p>
+        <a href="https://www.sequencehealth.com/blog/the-impact-of-24-7-medical-call-centers-on-patient-access-and-satisfaction">Read More →</a>
+       
+      </div>
+      <div class="card">
+        <div class="icon">
+          <img src="../assets/images/822163.png" alt="Book Beds">
+        </div>
+        <h3>Book Beds</h3>
+        <p>We make the process easier by providing real-time information on bed availability across hospitals in your area.</p>
+        <a href="https://www.uzzmed.com/types-of-hospital-beds/">Read More →</a>
+      </div>
+      <div class="card">
+        <div class="icon">
+          <img src="../assets/images/3022350.png" alt="Featured Hospitals">
+        </div>
+        <h3>Featured Hospitals</h3>
+        <p>The hospitals have been carefully selected based on criteria, including patient satisfaction and specialized services.</p>
+        <a href="https://www.rasmussen.edu/degrees/health-sciences/blog/types-of-healthcare-facilities/">Read More →</a>
+      </div>
+      <div class="card">
+        <div class="icon">
+          <img src="../assets/images/7778281.png" alt="Compare Hospitals">
+        </div>
+        <h3>Compare Hospitals</h3>
+        <p>Our platform simplifies the process by providing tools to compare top-rated hospitals in your area.</p>
+        <a href="https://www.medicare.gov/care-compare/?redirect=true&providerType=Hospital">Read More →</a>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="dc">
+    <h1 class="h">Find All Doctors</h1>
+    <!-- Single Row with 3 Cards -->
+    <div class="container">
+      <!-- Left Card -->
+      <div class="profile-card">
+        <div class="profile-header">
+            <img src="../assets/docter1.jpg" alt="Dr. Anoop Misra">
+            <div>
+                <h3>Dr. Anoop Misra</h3>
+                <p>EXECUTIVE CHAIRMAN FORTIS C DOC | Fortis C-Doc</p>
+            </div>
+        </div>
+        <div class="profile-details">
+            <p><strong>Specialization:</strong> Diabetology/Endocrinology | Endocrinology</p>
+            <ul>
+                <li><strong>Experience:</strong> <span>40 Years</span></li>
+                <li><strong>Fees:</strong> <span>₹ 2500</span></li>
+                <li><strong>Qualifications:</strong> MBBS, MD (Medicine), DM (Endocrinology)</li>
+                <li><strong>Hospital:</strong> Fortis C-Doc, New Delhi</li>
+                <li><strong>Consultation Timings:</strong> Mon-Sat, 10:00 AM - 5:00 PM</li>
+                <li><strong>Contact:</strong> +91 98765 43210</li>
+                <li><strong>Rating:</strong> ⭐⭐⭐⭐⭐ (4.9/5 based on 500 reviews)</li>
+            </ul>
+        </div>
+        <div class="profile-buttons">
+            <!-- View Full Profile Button -->
+            <a href="profile.html" class="btn">
+                <button>View Full Profile</button>
+            </a> 
+            <!-- Book Appointment Button -->
+            <a href="../views/appoiment.html" class="btn">
+                <button>Book Appointment</button>
+            </a>
+        </div>
+    </div>
+    
+
+     <!-- Middle Card -->
+     <div class="profile-card">
+      <div class="profile-header">
+          <img src="../assets/docter2.jpg" alt="Dr. Priya Singh">
+          <div>
+              <h3>Dr. Priya Singh</h3>
+              <p>HEAD OF DERMATOLOGY | AIIMS</p>
+          </div>
+      </div>
+      <div class="profile-details">
+          <p><strong>Specialization:</strong> Dermatology | Skin Specialist</p>
+          <ul>
+              <li><strong>Experience:</strong> <span>25 Years</span></li>
+              <li><strong>Fees:</strong> <span>₹ 2000</span></li>
+              <li><strong>Qualifications:</strong> MBBS, MD (Dermatology)</li>
+              <li><strong>Hospital:</strong> AIIMS, Delhi</li>
+              <li><strong>Consultation Timings:</strong> Mon-Fri, 11:00 AM - 4:00 PM</li>
+              <li><strong>Contact:</strong> +91 91234 56789</li>
+              <!-- <li><strong>Languages Spoken:</strong> English, Hindi, Bengali</li> -->
+              <li><strong>Rating:</strong> ⭐⭐⭐⭐☆ (4.8/5 based on 400 reviews)</li>
+          </ul>
+      </div>
+      <div class="profile-buttons">
+          <a href="profile.html" class="btn"><button>View Full Profile</button></a>
+          <a href="../views/appointment.html" class="btn"><button>Book Appointment</button></a>
+      </div>
+  </div>
+
+
+      <!-- Right Card -->
+      <!-- Right Card -->
+      <div class="profile-card">
+        <div class="profile-header">
+            <img src="../assets/images/download_71.jpeg" alt="Dr. Ramesh Sharma">
+            <div>
+                <h3>Dr. Ramesh Sharma</h3>
+                <p>Senior Consultant | Apollo Hospitals</p>
+            </div>
+        </div>
+        <div class="profile-details">
+            <p><strong>Specialization:</strong> Cardiology | Heart Specialist</p>
+            <ul>
+                <li><strong>Experience:</strong> <span>30 Years</span></li>
+                <li><strong>Fees:</strong> <span>₹ 3000</span></li>
+                <li><strong>Qualifications:</strong> MBBS, MD, DM (Cardiology)</li>
+                <li><strong>Hospital:</strong> Apollo Hospitals, Mumbai</li>
+                <li><strong>Consultation Timings:</strong> Mon-Sat, 9:00 AM - 3:00 PM</li>
+                <li><strong>Contact:</strong> +91 90876 54321</li>
+               <!-- <li><strong>Languages Spoken:</strong> English, Marathi, Hindi</li> -->
+                <li><strong>Rating:</strong> ⭐⭐⭐⭐⭐ (4.7/5 based on 350 reviews)</li>
+            </ul>
+        </div>
+        <div class="profile-buttons">
+            <a href="profile.html" class="btn"><button>View Full Profile</button></a>
+            <a href="../views/appointment.html" class="btn"><button>Book Appointment</button></a>
+        </div>
+    </div>
+    </div>
+  </section>
+ 
+  <section>
+    
+    <div class="container">
+        <!-- Doctor 1 -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <img src="https://thumbs.dreamstime.com/z/indian-doctor-28013008.jpg" alt="Dr. Anoop Misra">
+                <div>
+                    <h3>Dr. Anoop Misra</h3>
+                    <p>EXECUTIVE CHAIRMAN | Fortis C-Doc</p>
+                </div>
+            </div>
+            <div class="profile-details">
+                <p><strong>Specialization:</strong> Diabetology/Endocrinology</p>
+                <ul>
+                    <li><strong>Experience:</strong> 40 Years</li>
+                    <li><strong>Fees:</strong> ₹2500</li>
+                    <li><strong>Qualifications:</strong> MBBS, MD (Medicine), DM (Endocrinology)</li>
+                    <li><strong>Hospital:</strong> Fortis C-Doc, New Delhi</li>
+                    <li><strong>Consultation Timings:</strong> Mon-Sat, 10:00 AM - 5:00 PM</li>
+                    <li><strong>Contact:</strong> +91 98765 43210</li>
+                    <li><strong>Rating:</strong> ⭐⭐⭐⭐⭐ (4.9/5 based on 500 reviews)</li>
+                    <li><strong>Languages Spoken:</strong> English, Hindi</li>
+                    <li><strong>Consultation Mode:</strong> In-Person, Online</li>
+                </ul>
+            </div>
+            <div class="profile-buttons">
+                <a href="profile.html" class="btn"><button>View Full Profile</button></a>
+                <a href="../views/appoiment.html" class="btn"><button>Book Appointment</button></a>
+            </div>
+        </div>
+
+        <!-- Doctor 2 -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <img src="https://thumbs.dreamstime.com/b/doctor-indian-38175791.jpg" alt="Dr. Priya Singh">
+                <div>
+                    <h3>Dr. Priya Singh</h3>
+                    <p>HEAD OF DERMATOLOGY | AIIMS</p>
+                </div>
+            </div>
+            <div class="profile-details">
+                <p><strong>Specialization:</strong> Dermatology | Skin Specialist</p>
+                <ul>
+                    <li><strong>Experience:</strong> 25 Years</li>
+                    <li><strong>Fees:</strong> ₹2000</li>
+                    <li><strong>Qualifications:</strong> MBBS, MD (Dermatology)</li>
+                    <li><strong>Hospital:</strong> AIIMS, New Delhi</li>
+                    <li><strong>Consultation Timings:</strong> Mon-Fri, 9:00 AM - 3:00 PM</li>
+                    <li><strong>Contact:</strong> +91 98765 87654</li>
+                    <li><strong>Rating:</strong> ⭐⭐⭐⭐ (4.8/5 based on 350 reviews)</li>
+                    <li><strong>Languages Spoken:</strong> English, Hindi</li>
+                    <li><strong>Consultation Mode:</strong> In-Person, Online</li>
+                </ul>
+            </div>
+            <div class="profile-buttons">
+                <a href="profile.html" class="btn"><button>View Full Profile</button></a>
+                <a href="../views/appoiment.html" class="btn"><button>Book Appointment</button></a>
+            </div>
+        </div>
+
+        <!-- Doctor 3 -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <img src="https://img.freepik.com/premium-photo/indian-female-doctor-indian-nurse_714173-208.jpg" alt="Dr. Ramesh Sharma">
+                <div>
+                    <h3>Dr. Ramesh Sharma</h3>
+                    <p>Senior Consultant | Apollo Hospitals</p>
+                </div>
+            </div>
+            <div class="profile-details">
+                <p><strong>Specialization:</strong> Cardiology | Heart Specialist</p>
+                <ul>
+                    <li><strong>Experience:</strong> 30 Years</li>
+                    <li><strong>Fees:</strong> ₹3000</li>
+                    <li><strong>Qualifications:</strong> MBBS, MD (Cardiology), DM (Cardiology)</li>
+                    <li><strong>Hospital:</strong> Apollo Hospitals, Delhi</li>
+                    <li><strong>Consultation Timings:</strong> Mon-Sat, 11:00 AM - 6:00 PM</li>
+                    <li><strong>Contact:</strong> +91 98765 32109</li>
+                    <li><strong>Rating:</strong> ⭐⭐⭐⭐⭐ (4.9/5 based on 600 reviews)</li>
+                    <li><strong>Languages Spoken:</strong> English, Hindi, Tamil</li>
+                    <li><strong>Consultation Mode:</strong> In-Person, Online</li>
+                </ul>
+            </div>
+            <div class="profile-buttons">
+                <a href="profile.html" class="btn"><button>View Full Profile</button></a>
+                <a href="../views/appoiment.html" class="btn"><button>Book Appointment</button></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+  <div class="container">
+      <!-- Doctor Card 1 -->
+      <div class="profile-card">
+          <div class="profile-header">
+              <img src="https://tse4.mm.bing.net/th?id=OIP.8PrTQL8_ROL1b4hV4GY8RAHaHa&pid=Api&P=0&h=220" alt="Dr. Anoop Misra">
+              <div>
+                  <h3>Dr. Anoop Misra</h3>
+                  <p>EXECUTIVE CHAIRMAN | Fortis C-Doc</p>
+              </div>
+          </div>
+          <div class="profile-details">
+              <p><strong>Specialization:</strong> Diabetology/Endocrinology</p>
+              <p><strong>Experience:</strong> 40 Years</p>
+              <p><strong>Fees:</strong> ₹ 2500</p>
+              <p><strong>Location:</strong> New Delhi, India</p>
+              <p><strong>Languages:</strong> English, Hindi</p>
+              <p><strong>Ratings:</strong> ⭐⭐⭐⭐⭐ (4.9/5)</p>
+              <p><strong>Consultation:</strong> In-person, Video Call</p>
+          </div>
+          <div class="profile-buttons">
+              <button>View Full Profile</button>
+              <button>Book Appointment</button>
+          </div>
+      </div>
+      
+      <!-- Doctor Card 2 -->
+      <div class="profile-card">
+          <div class="profile-header">
+              <img src="https://tse2.mm.bing.net/th?id=OIP.pDFeeMmtwJ6uruwvbvlItQHaE7&pid=Api&P=0&h=220" alt="Dr. Priya Singh">
+              <div>
+                  <h3>Dr. Priya Singh</h3>
+                  <p>HEAD OF DERMATOLOGY | AIIMS</p>
+              </div>
+          </div>
+          <div class="profile-details">
+              <p><strong>Specialization:</strong> Dermatology | Skin Specialist</p>
+              <p><strong>Experience:</strong> 25 Years</p>
+              <p><strong>Fees:</strong> ₹ 2000</p>
+              <p><strong>Location:</strong> AIIMS, Delhi</p>
+              <p><strong>Languages:</strong> English, Hindi</p>
+              <p><strong>Ratings:</strong> ⭐⭐⭐⭐⭐ (4.8/5)</p>
+              <p><strong>Consultation:</strong> In-person, Video Call</p>
+          </div>
+          <div class="profile-buttons">
+              <button>View Full Profile</button>
+              <button>Book Appointment</button>
+          </div>
+      </div>
+      
+      <!-- Doctor Card 3 -->
+      <div class="profile-card">
+          <div class="profile-header">
+              <img src="https://tse3.mm.bing.net/th?id=OIP.Otr8OcoUHKn4TsXdDvBmMAHaJQ&pid=Api&P=0&h=220" alt="Dr. Ramesh Sharma">
+              <div>
+                  <h3>Dr. Ramesh Sharma</h3>
+                  <p>Senior Consultant | Apollo Hospitals</p>
+              </div>
+          </div>
+          <div class="profile-details">
+              <p><strong>Specialization:</strong> Cardiology | Heart Specialist</p>
+              <p><strong>Experience:</strong> 30 Years</p>
+              <p><strong>Fees:</strong> ₹ 3000</p>
+              <p><strong>Location:</strong> Apollo, Mumbai</p>
+              <p><strong>Languages:</strong> English, Marathi, Hindi</p>
+              <p><strong>Ratings:</strong> ⭐⭐⭐⭐⭐ (4.7/5)</p>
+              <p><strong>Consultation:</strong> In-person, Video Call</p>
+          </div>
+          <div class="profile-buttons">
+              <button>View Full Profile</button>
+              <button>Book Appointment</button>
+          </div>
+      </div>
+  </div>
+</section>
+
+  <section>
+    <div class="container1">
+      <h1 class="ha">Explore More Doctors</h1>
+      <div class="accordion">
+
+        <!-- Section 1 -->
+       <!-- Section 1: Explore Doctors by City -->
+<div class="accordion-item">
+  <button class="accordion-header" onclick="toggleAccordion()">Explore Doctors by City</button>
+  <div class="accordion-content" style="display: none;">
+    <ul class="u">
+      <li onclick="showDoctors('Delhi')">Delhi</li>
+      <li onclick="showDoctors('Mumbai')">Mumbai</li>
+      <li onclick="showDoctors('Bangalore')">Bangalore</li>
+      <li onclick="showDoctors('Chennai')">Chennai</li>
+      <li onclick="showDoctors('Kolkata')">Kolkata</li>
+      <li onclick="showDoctors('Hyderabad')">Hyderabad</li>
+      <li onclick="showDoctors('Pune')">Pune</li>
+      <li onclick="showDoctors('Ahmedabad')">Ahmedabad</li>
+      <li onclick="showDoctors('Jaipur')">Jaipur</li>
+      <li onclick="showDoctors('Surat')">Surat</li>
+      <li onclick="showDoctors('Lucknow')">Lucknow</li>
+      <li onclick="showDoctors('Kanpur')">Kanpur</li>
+      <li onclick="showDoctors('Nagpur')">Nagpur</li>
+      <li onclick="showDoctors('Visakhapatnam')">Visakhapatnam</li>
+      <li onclick="showDoctors('Indore')">Indore</li>
+      <li onclick="showDoctors('Thane')">Thane</li>
+      <li onclick="showDoctors('Bhopal')">Bhopal</li>
+      <li onclick="showDoctors('Patna')">Patna</li>
+      <li onclick="showDoctors('Vadodara')">Vadodara</li>
+      <li onclick="showDoctors('Ghaziabad')">Ghaziabad</li>
+      <li onclick="showDoctors('Ludhiana')">Ludhiana</li>
+      <li onclick="showDoctors('Agra')">Agra</li>
+      <li onclick="showDoctors('Nashik')">Nashik</li>
+      <li onclick="showDoctors('Faridabad')">Faridabad</li>
+      <li onclick="showDoctors('Meerut')">Meerut</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Doctor List Section -->
+<div class="doctor-list" id="doctor-list" style="display: none;">
+  <h3 class="information">Doctors in <span id="city-name"></span></h3>
+  <ul id="doctors"></ul>
+</div>
+
+
+
+
+
+        <!-- Section 2 -->
+         
+        <div class="accordion-item">
+          <button class="accordion-header">Explore Doctors by Speciality</button>
+          <div class="accordion-content">
+            <ul class="u">
+              <li>Cardiology</li>
+              <li>Dermatology</li>
+              <li>Neurology</li>
+              <li>Pediatrics</li>
+              <li>Orthopedics</li>
+              <li>Oncology</li>
+              <li>Endocrinology</li>
+              <li>Gastroenterology</li>
+              <li>Hematology</li>
+              <li>Nephrology</li>
+              <li>Ophthalmology</li>
+              <li>Psychiatry</li>
+              <li>Rheumatology</li>
+              <li>Urology</li>
+              <li>Gynecology</li>
+              <li>Pulmonology</li>
+              <li>Radiology</li>
+              <li>Anesthesiology</li>
+              <li>Allergy & Immunology</li>
+              <li>Pathology</li>
+              <li>Plastic Surgery</li>
+              <li>General Surgery</li>
+              <li>Otolaryngology (ENT)</li>
+              <li>Emergency Medicine</li>
+              <li>Infectious Disease</li>
+          </ul>
+          
+          </div>
+        </div>
+        <!-- Section 3 -->
+        <div class="accordion-item">
+          <button class="accordion-header">Explore Doctors by Hospital</button>
+          <div class="accordion-content">
+            <ul class="u">
+              <li>AIIMS</li>
+              <li>Fortis</li>
+              <li>Apollo Hospitals</li>
+              <li>Max Healthcare</li>
+              <li>Narayana Health</li>
+              <li>Medanta – The Medicity</li>
+              <li>Manipal Hospitals</li>
+              <li>Columbia Asia Hospitals</li>
+              <li>Sir Ganga Ram Hospital</li>
+              <li>Jaslok Hospital & Research Centre</li>
+              <li>Christian Medical College (CMC), Vellore</li>
+              <li>King Edward Memorial (KEM) Hospital</li>
+              <li>Saifee Hospital</li>
+              <li>Hinduja Hospital</li>
+              <li>Ruby Hall Clinic</li>
+              <li>Gleneagles Global Hospitals</li>
+              <li>Sunshine Hospitals</li>
+              <li>Care Hospitals</li>
+              <li>Yashoda Hospitals</li>
+              <li>Nanavati Super Speciality Hospital</li>
+              <li>Dr. B. L. Kapur Memorial Hospital</li>
+              <li>Amrita Institute of Medical Sciences</li>
+              <li>Kokilaben Dhirubhai Ambani Hospital</li>
+              <li>MIOT International</li>
+              <li>Tata Memorial Hospital</li>
+              <li>Sri Ramachandra Medical Centre</li>
+              <li>Shalby Hospitals</li>
+          </ul>
+          
+          </div>
+        </div>
+        <!-- Section 4 -->
+        <div class="accordion-item">
+          <button class="accordion-header">Explore Doctors by Location and Speciality</button>
+          <div class="accordion-content">
+            <p class="u2">Find the best doctors near you, filtered by your preferred speciality and location.</p>
+          </div>
+        </div>
+        <!-- Section 5 -->
+        <div class="accordion-item">
+          <button class="accordion-header">Explore Doctors by Hospital and Speciality</button>
+          <div class="accordion-content">
+            <p class="u2">Get specialized treatment at reputed hospitals with top doctors.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-content">
+        <div class="telephone-section">
+                 <h1 class="contact">Contact-us.</h1>
+            <div class="tel">
+                <img class="telp" src="../assets/telephone.jpeg" alt="Telephone">
+                <p>(+254) 717 783 146</p>
+            </div>
+        
+            <!-- Social Media Icons -->
+            <div class="social-media">
+                
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://wa.me/+254717783146" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        
+    <div class="paragraph">
+        <h1 class="ambulance">Ambulance-service.</h1>
+        <i class="fa fa-ambulance" aria-hidden="true"></i>
+          <p>+91-9170879945,<br> +91-9170879976 <br>+91-9167876543</p>
+    </div>
+    
+        <div class="footer-paragraph">
+            <h1 class="location">Link.</h1>
+           <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/service">Services</a></li>
+            <li><a href="/docter">Doctors</a></li>
+            <li><a href="/haspit">Hospitals</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/signup">SignUp</a></li>
+            <li><a href="/signin">SignIn</a></li>
+            <li><a href="/otp">Otp</a></li>
+            <li><a href="./details">Details</a></li>
+           </ul>
+       </div>
+
+       <div class="footer-paragraph">
+        <h1 class="location">Location-track.</h1>
+       <i class="fa fa-map-marker" aria-hidden="true"></i>
+      <h3>IIIT Bhagalpur</h3>
+      <p>College of Engineering Campus, Sabour,<br> Bhagalpur, Bihar 813210</p>
+   </div>
+    </div>
+</footer>
+</body>
+</html>

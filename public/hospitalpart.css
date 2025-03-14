@@ -1,0 +1,545 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  body {
+    line-height: 1.6;
+    background-color: #94FFF9;
+}
+
+header {
+    background-color: #d0f1f7;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #d0f1f7;
+}
+
+.emergency,
+.contact-info {
+    color: #008080;
+    font-size: 14px;
+}
+.telp{
+    width:20px;
+  height:20px; 
+  border-radius:50%;
+
+}
+.tel{
+    display:flex;
+}
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #32c1e9;
+  margin-top:5px;
+  margin-bottom:5px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #00796b;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 20px;
+}
+.navbar a.active,
+.navbar a:hover {
+background-color: #004d40;
+color: white;
+}
+.navbar .logo img {
+  height: 50px;
+
+}
+.t{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+ contact-between: space-between;
+}
+
+.search-icon{
+    width:30px;
+    height:30px; 
+    display: flex;
+    gap: 15px;
+   space-between:12px;
+   border-radius:50%;
+}
+.appointment-btn {
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: #000;
+   
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius:10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#search-input {
+    padding: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#search-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    //background-color: #b3e5fc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Ensure the body and html take up the full height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-image: url('../assets/images/istockphoto-904424514-612x612.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white; /* Text color for visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 800px; /* Optional: Limit the width of content */
+    z-index: 10; /* Ensure text is above background */
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Animation */
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-45deg);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1); /* Slight zoom-in effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover::after {
+    left: 100%; /* Slide the overlay across */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+  header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #bdefff;
+    padding: 10px 20px;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 60px;
+    margin-right: 10px;
+  }
+  
+  .emergency-info {
+    font-size: 12px;
+  }
+  
+  .navbar-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .btn-appointment {
+    background: #007BFF;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .social-icons a {
+    margin-left: 10px;
+    color: #007BFF;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .hospital-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+  
+  .hospital-info img {
+    height: 200px;
+    width:400px;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
+
+  .departments h3 {
+    margin: 20px 0 10px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+  }
+  
+  .cell.occupied {
+    background: #000080;
+  }
+  
+  .cell.discharging {
+    background: #1e90ff;
+  }
+  
+  .cell.available {
+    background: #00ff00;
+  }
+  
+  .opd .cell.opd-slot {
+    text-align: center;
+    line-height: 30px;
+    background: #007BFF;
+    color: #fff;
+  }
+  
+  footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    min-height: 100px;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.footer paragraph{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* Flexbox layout for footer-content */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribute space between left and right sections */
+    align-items: center; /* Center vertically */
+}
+
+.telephone-section {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align content to the left */
+}
+.contact{
+    color: #fff; /* White text for headings */
+    text-align: center;  /* Center-align the heading */
+    font-size: 2em;  /* Increase the size for emphasis */
+    font-weight: bold;  /* Bold text for added impact */
+    //text-transform: uppercase;  /* Uppercase letters for a bold appearance */
+    letter-spacing: 1px;  /* Slightly increase letter spacing */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Add a subtle shadow for depth */
+    margin-top: 50px;  /* Add top margin to give space */
+    margin-bottom: 20px; 
+    
+}
+
+.tel {
+    display: flex;
+    align-items: center; /* Center the telephone content vertically */
+    margin-left:50px;
+}
+
+.telp {
+    width: 30px; /* Set the width of the telephone icon */
+    height: 30px; /* Set the height of the telephone icon */
+    margin-right: 10px; /* Space between the icon and the phone number */
+}
+
+.social-media {
+    margin-top: 10px; /* Space between the telephone section and the social icons */
+    display: flex;
+    gap: 15px; /* Space between icons */
+    margin-left:50px;
+}
+
+.social-media a {
+  color: white; /* Icon color */
+    font-size: 24px; /* Adjust the size of the icons */
+    text-decoration: none; /* Remove the underline */
+}
+
+.social-media a:hover {
+    color: #1da1f2; /* Twitter blue color when hovered */
+}
+ .location{
+    color: #fff;  White text for headings */
+   text-align: center;  /* Center-align the heading */
+    font-size: 2em;  /* Increase the size for emphasis */
+   font-weight: bold;  /* Bold text for added impact */
+   // text-transform: uppercase;  /* Uppercase letters for a bold appearance */
+    letter-spacing: 1px;  /* Slightly increase letter spacing */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Add a subtle shadow for depth */
+    margin-top: 0px;  /* Add top margin to give space */
+   margin-bottom: 2px;
+  
+} 
+.footer-paragraph {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-paragraph h3 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.footer-paragraph p {
+    color: #fff;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Icon styling */
+.footer-paragraph i {
+    font-size: 2em;
+    color: #ff5722; /* Orange color for map icon */
+    margin-right: 10px;
+}
+
+.ambulance{
+    color: #fff;  White text for headings */
+   text-align: center;  /* Center-align the heading */
+    font-size: 2em;  /* Increase the size for emphasis */
+   font-weight: bold;  /* Bold text for added impact */
+   // text-transform: uppercase;  /* Uppercase letters for a bold appearance */
+    letter-spacing: 1px;  /* Slightly increase letter spacing */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Add a subtle shadow for depth */
+    margin-top: 0px;  /* Add top margin to give space */
+   margin-bottom: 2px;
+  
+} 
+.paragraph {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.paragraph h3 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.paragraph p {
+    color: #fff;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Icon styling */
+ .paragraph i {
+    font-size: 2em;
+    color: #ff5722; /* Orange color for map icon */
+    margin-right: 10px;
+} 
+
+
+  /* Image links styling */
+.grid a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .grid a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .grid a:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  
+  .grid a span {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  
+  /* Left and right navigation links for departments */
+  .departments {
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  .departments .nav-link {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .departments .nav-link.left {
+    left: -50px;
+  }
+  
+  .departments .nav-link.right {
+    right: -50px;
+  }
+  
+  .departments .nav-link:hover {
+    background: #0056b3;
+  }
+  

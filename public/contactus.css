@@ -1,0 +1,691 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+  } */
+  body {
+    line-height: 1.6;
+    background-color:F5F5F5;
+}
+
+header {
+    background-color: #d0f1f7;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #d0f1f7;
+}
+
+.emergency,
+.contact-info {
+    color: #008080;
+    font-size: 14px;
+}
+.telp{
+    width:20px;
+  height:20px; 
+  border-radius:50%;
+
+}
+.tel{
+    display:flex;
+}
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #32c1e9;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #00796b;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 20px;
+  }
+.navbar a.active,
+.navbar a:hover {
+  background-color: #004d40;
+  color: white;
+}
+.navbar .logo img {
+    height: 50px;
+
+}
+.t{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+   contact-between: space-between;
+}
+
+.search-icon{
+    width:30px;
+    height:30px; 
+    display: flex;
+    gap: 15px;
+   space-between:12px;
+   border-radius:50%;
+}
+.appointment-btn {
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: #000;
+   
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius:10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#search-input {
+    padding: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#search-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    //background-color: #b3e5fc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Ensure the body and html take up the full height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-image: url('../assets/images/4433914.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white; /* Text color for visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 800px; /* Optional: Limit the width of content */
+    z-index: 10; /* Ensure text is above background */
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Animation */
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-45deg);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1); /* Slight zoom-in effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover::after {
+    left: 100%; /* Slide the overlay across */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info, .contact-form {
+    flex: 1 1 300px;
+    padding: 20px;
+  }
+  
+  .contact-info h2, .contact-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .info-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .icon {
+    font-size: 2rem;
+    margin-right: 15px;
+    color: #007bff;
+  }
+  
+  .info-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .info-box p {
+    margin-bottom: 5px;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .submit-btn, .reset-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .submit-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .reset-btn {
+    background-color: #f0f0f0;
+    color: black;
+  }
+  
+  .reset-btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    min-height: 100px;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.footer paragraph{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* Flexbox layout for footer-content */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribute space between left and right sections */
+    align-items: center; /* Center vertically */
+}
+
+.telephone-section {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align content to the left */
+}
+.contact{
+    color: #fff; /* White text for headings */
+    text-align: center;  /* Center-align the heading */
+    font-size: 2em;  /* Increase the size for emphasis */
+    font-weight: bold;  /* Bold text for added impact */
+    //text-transform: uppercase;  /* Uppercase letters for a bold appearance */
+    letter-spacing: 2px;  /* Slightly increase letter spacing */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Add a subtle shadow for depth */
+    margin-top: 50px;  /* Add top margin to give space */
+    margin-bottom: 20px; 
+    margin-left:30px;
+    
+}
+
+.tel {
+    display: flex;
+    align-items: center; /* Center the telephone content vertically */
+    margin-left:50px;
+}
+
+.telp {
+    width: 30px; /* Set the width of the telephone icon */
+    height: 30px; /* Set the height of the telephone icon */
+    margin-right: 10px; /* Space between the icon and the phone number */
+}
+
+.social-media {
+    margin-top: 10px; /* Space between the telephone section and the social icons */
+    display: flex;
+    gap: 15px; /* Space between icons */
+    margin-left:50px;
+}
+
+.social-media a {
+    color: white; /* Icon color */
+    font-size: 24px; /* Adjust the size of the icons */
+    text-decoration: none; /* Remove the underline */
+}
+
+.social-media a:hover {
+    color: #1da1f2; /* Twitter blue color when hovered */
+}
+ .location{
+    color: #fff;  White text for headings */
+   text-align: center;  /* Center-align the heading */
+    font-size: 2em;  /* Increase the size for emphasis */
+   font-weight: bold;  /* Bold text for added impact */
+   // text-transform: uppercase;  /* Uppercase letters for a bold appearance */
+    letter-spacing: 2px;  /* Slightly increase letter spacing */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Add a subtle shadow for depth */
+    margin-top: 0px;  /* Add top margin to give space */
+   margin-bottom: 2px;
+  
+} 
+.footer-paragraph {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-paragraph h3 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.footer-paragraph p {
+    color: #fff;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Icon styling */
+.footer-paragraph i {
+    font-size: 2em;
+    color: #ff5722; /* Orange color for map icon */
+    margin-right: 10px;
+}
+
+.ambulance{
+    color: #fff;  White text for headings */
+   text-align: center;  /* Center-align the heading */
+    font-size: 2em;  /* Increase the size for emphasis */
+   font-weight: bold;  /* Bold text for added impact */
+   // text-transform: uppercase;  /* Uppercase letters for a bold appearance */
+    letter-spacing: 2px;  /* Slightly increase letter spacing */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Add a subtle shadow for depth */
+    margin-top: 0px;  /* Add top margin to give space */
+   margin-bottom: 2px;
+  
+} 
+.paragraph {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.paragraph h3 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.paragraph p {
+    color: #fff;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Icon styling */
+ .paragraph i {
+    font-size: 2em;
+    color: #ff5722; /* Orange color for map icon */
+    margin-right: 10px;
+} 
+/* Wrapper for the Contact Form Box */
+.contact-form-box {
+    background-color: #c2410c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    width: 600px;
+    margin-right:150px ; /* Center the box horizontally */
+  }
+  .contact-form-box h1{
+    color:black;
+    font-size:2rem;
+    margin-bottom:20px;
+  }
+  /* Form Group Styling */
+  .contact-form-box .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .contact-form-box .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .contact-form-box .form-group input,
+  .contact-form-box .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Buttons Styling */
+  .contact-form-box .form-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .contact-form-box .submit-btn,
+  .contact-form-box .reset-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .contact-form-box .submit-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .contact-form-box .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .contact-form-box .reset-btn {
+    background-color:red;
+    color: black;
+  }
+  
+  .contact-form-box .reset-btn:hover {
+    background-color: #e0e0e0;
+  }
+  .contact-form-box h2{
+   
+    font-size:2rem;
+
+  }
+  .adress h1{
+    font-size:1.5rem;
+  }
+  .adress p{
+    font-size:1.2rem;
+  }
+  .number h1{
+    font-size:1.5rem;
+  }
+  .number p{
+    font-size:1.2rem;
+  }
+  .email h1{
+    font-size:1.5rem;
+  }
+  .email p{
+    font-size:1.2rem;
+  }
+  .form-buttons{
+    margin-right:40px;
+  }
+ 
+    .home-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        background-color: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .home-btn:hover {
+        background-color: #218838;
+    }
+
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Section with Background Image */
+.content1 {
+  background: url('../assets/images/image_7.png') no-repeat center center/cover;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Image Row - Flexbox for Responsiveness */
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  gap: 20px;
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Hover Effect */
+.image-container:hover {
+  transform: scale(1.1);
+}
+
+/* Overlay Text */
+.overlay-text {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 14px;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Address Tooltip (Hidden by Default) */
+.address-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+/* Show Tooltip on Hover */
+.image-container:hover .address-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .image-row {
+      flex-direction: column;
+      align-items: center;
+  }
+  .image-container {
+      width: 80%;
+  }
+}

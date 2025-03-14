@@ -1,0 +1,401 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+.navbar a {
+    text-decoration: none;
+    color: #00796b;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 20px;
+  }
+.navbar a.active,
+.navbar a:hover {
+  background-color: #004d40;
+  color: white;
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar .logo span {
+    color: #ff9900;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar .nav-links a:hover {
+    color: #ff9900;
+}
+.search-icon{
+    width:30px;
+    height:30px; 
+    display: flex;
+    gap: 15px;
+   space-between:12px;
+   border-radius:50%;
+}
+.appointment-btn {
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: #000;
+   
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius:10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#search-input {
+    padding: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#search-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    //background-color: #b3e5fc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Login Section */
+.auth-page {
+    padding: 50px 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-container h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #ff9900;
+}
+
+.auth-button {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #cc7a00;
+}
+
+.auth-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.auth-text a {
+    color: #ff9900;
+    text-decoration: none;
+}
+
+.auth-text a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    min-height: 100px;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.footer paragraph{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* Flexbox layout for footer-content */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribute space between left and right sections */
+    align-items: center; /* Center vertically */
+}
+
+.telephone-section {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align content to the left */
+}
+.contact{
+    color: #fff; /* White text for headings */
+    text-align: center;  /* Center-align the heading */
+    font-size: 2em;  /* Increase the size for emphasis */
+    font-weight: bold;  /* Bold text for added impact */
+    //text-transform: uppercase;  /* Uppercase letters for a bold appearance */
+    letter-spacing: 1px;  /* Slightly increase letter spacing */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Add a subtle shadow for depth */
+    margin-top: 50px;  /* Add top margin to give space */
+    margin-bottom: 20px; 
+    
+}
+
+.tel {
+    display: flex;
+    align-items: center; /* Center the telephone content vertically */
+    margin-left:50px;
+}
+
+.telp {
+    width: 30px; /* Set the width of the telephone icon */
+    height: 30px; /* Set the height of the telephone icon */
+    margin-right: 10px; /* Space between the icon and the phone number */
+}
+
+.social-media {
+    margin-top: 10px; /* Space between the telephone section and the social icons */
+    display: flex;
+    gap: 15px; /* Space between icons */
+    margin-left:50px;
+}
+
+.social-media a {
+    color: white;/* Icon color */
+    font-size: 24px; /* Adjust the size of the icons */
+    text-decoration: none; /* Remove the underline */
+}
+
+.social-media a:hover {
+    color: #1da1f2; /* Twitter blue color when hovered */
+}
+ .location{
+    color: #fff;  White text for headings */
+   text-align: center;  /* Center-align the heading */
+    font-size: 2em;  /* Increase the size for emphasis */
+   font-weight: bold;  /* Bold text for added impact */
+   // text-transform: uppercase;  /* Uppercase letters for a bold appearance */
+    letter-spacing: 1px;  /* Slightly increase letter spacing */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Add a subtle shadow for depth */
+    margin-top: 0px;  /* Add top margin to give space */
+   margin-bottom: 2px;
+  
+} 
+.footer-paragraph {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-paragraph h3 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.footer-paragraph p {
+    color: #fff;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Icon styling */
+.footer-paragraph i {
+    font-size: 2em;
+    color: #ff5722; /* Orange color for map icon */
+    margin-right: 10px;
+}
+
+.ambulance{
+    color: #fff;  White text for headings */
+   text-align: center;  /* Center-align the heading */
+    font-size: 2em;  /* Increase the size for emphasis */
+   font-weight: bold;  /* Bold text for added impact */
+   // text-transform: uppercase;  /* Uppercase letters for a bold appearance */
+    letter-spacing: 1px;  /* Slightly increase letter spacing */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Add a subtle shadow for depth */
+    margin-top: 0px;  /* Add top margin to give space */
+   margin-bottom: 2px;
+  
+} 
+.paragraph {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.paragraph h3 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.paragraph p {
+    color: #fff;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Icon styling */
+ .paragraph i {
+    font-size: 2em;
+    color: #ff5722; /* Orange color for map icon */
+    margin-right: 10px;
+} 
+
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+
+    .auth-page {
+        padding: 30px 0;
+    }
+
+    .auth-container {
+        padding: 20px;
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .auth-container h2 {
+        font-size: 20px;
+    }
+
+    .auth-button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .input-group input {
+        padding: 10px;
+    }
+
+    .auth-text {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mens Watches</title>
+  <link rel="stylesheet" href="products.css">
+  <link rel="stylesheet" href="output.css">
+</head>
+<body>
+  <header>
+    <h1>Men's Watches Collection</h1>
+  </header>
+
+  <main>
+    <div id="products-container" class="products-grid">
+      <!-- Products will be dynamically injected here -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Swasthya Kiran. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const productsContainer = document.getElementById('products-container');
+
+    async function fetchProducts() {
+      try {
+        const response = await fetch('/products/mens-watches'); // Adjust endpoint if needed
+        if (!response.ok) throw new Error('Failed to fetch products');
+        const data = await response.json();
+
+        // Clear the container
+        productsContainer.innerHTML = '';
+
+        // Populate the grid with product cards
+        data.forEach(product => {
+          const productCard = document.createElement('div');
+          productCard.className = 'product-card';
+
+          productCard.innerHTML = `
+            <img src="${product.thumbnail}" alt="${product.title}" class="product-image">
+            <h2 class="product-title">${product.title}</h2>
+            <p class="product-category">${product.category}</p>
+            <p class="product-price">$${product.price.toFixed(2)}</p>
+          `;
+
+          productsContainer.appendChild(productCard);
+        });
+      } catch (error) {
+        console.error('Error:', error);
+        productsContainer.innerHTML = '<p>Failed to load products. Please try again later.</p>';
+      }
+    }
+
+    // Fetch products on page load
+    fetchProducts();
+  </script>
+</body>
+</html>
+

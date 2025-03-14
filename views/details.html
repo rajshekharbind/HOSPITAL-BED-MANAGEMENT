@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical History Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="details.css">
+ 
+</head>
+<body>
+
+ 
+  <header>
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img class="t" src="../assets/images/image_2.png" alt="Swasthya Kiran Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/service">Services</a></li>
+            <li><a href="/docter">Doctors</a></li>
+            <li><a href="/haspit">Hospitals</a></li>
+            <li><a href="/about">About Us</a></li>
+            <!-- <li><a href="/signup">SignUp</a></li>
+            <li><a href="/signin">SignIn</a></li>
+            <li><a href="/otp">Otp</a></li>
+            <li><a href="./details">Details</a></li> -->
+            <img class="search-icon" src="../assets/seatch.jpeg" alt="Search">
+        </ul>
+        <!-- <a href="#" class="appointment-btn">Appointment</a> -->
+        
+        <!-- Search Form (Initially hidden) -->
+        <div class="search-form" style="display: none;">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button id="search-btn" onclick="performSearch()">Search</button>
+        </div>
+    </nav>
+</header>
+  
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="user-info">
+        <img src="../assets/images/ellipse_1.png" alt="User Avatar">
+        <h3>RAJ SHEKHAR</h3>
+        <p>Free Account</p>
+      </div>
+      <ul class="menu">
+        <li><a href="#">Overview</a></li>
+        <li><a href="/service">Services</a></li>
+        <li><a href="/docter">Doctors</a></li>
+        <li><a href="../HtmlSheet/hospital.html">Medical History</a></li>
+      </ul>
+      <a href="/hospitalpart" class="active-case-btn">Active Case</a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="detail">
+      <h2>Personal Details:</h2>
+      <form action="/details" method="POST" class="personal-form" enctype="multipart/form-data">
+        <!-- Personal Details -->
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="first-name" required>
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-number">Contact Number</label>
+          <input type="text" id="contact-number" name="contact-number" required>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" required>
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="blood-group">Blood Group</label>
+          <select id="blood-group" name="blood-group" required>
+            <option value="">Select Blood Group</option>
+            <option value="A+">A+</option>
+            <option value="B+">B+</option>
+            <option value="O+">O+</option>
+            <option value="AB+">AB+</option>
+            <option value="N/A">N/A</option>
+          </select>
+        </div>
+        <div class="form-group address">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="4" required></textarea>
+        </div>
+  
+        <!-- Medical History -->
+        <h2>Medical History</h2>
+        <div class="form-group">
+          <label for="co-existing">Co-existing Disease</label>
+          <input type="file" id="co-existing" name="co-existing" accept=".pdf,.jpg,.jpeg,.png">
+        </div>
+        <div class="form-group">
+          <label for="drugs-consumed">Drugs Currently Consuming</label>
+          <input type="file" id="drugs-consumed" name="drugs-consumed" accept=".pdf,.jpg,.jpeg,.png">
+        </div>
+        <div class="form-group">
+          <label for="drug-allergies">Drug Allergies</label>
+          <input type="file" id="drug-allergies" name="drug-allergies" accept=".pdf,.jpg,.jpeg,.png">
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" class="register-btn">Register</button>
+      </form>
+  </main>
+  
+  </div>
+
+  <footer>
+    <div class="footer-content">
+        <div class="telephone-section">
+                 <h1 class="contact">Contact-us.</h1>
+            <div class="tel">
+                <img class="telp" src="../assets/telephone.jpeg" alt="Telephone">
+                <p>(+254) 717 783 146</p>
+            </div>
+        
+            <!-- Social Media Icons -->
+            <div class="social-media">
+                
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://wa.me/+254717783146" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        
+    <div class="paragraph">
+        <h1 class="ambulance">Ambulance-service.</h1>
+        <i class="fa fa-ambulance" aria-hidden="true"></i>
+          <p>+91-9170879945,<br> +91-9170879976 <br>+91-9167876543</p>
+    </div>
+    
+        <div class="footer-paragraph">
+            <h1 class="location">Link.</h1>
+           <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/service">Services</a></li>
+            <li><a href="/docter">Doctors</a></li>
+            <li><a href="/haspit">Hospitals</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/signup">SignUp</a></li>
+            <li><a href="/signin">SignIn</a></li>
+            <li><a href="/otp">Otp</a></li>
+            <li><a href="./details">Details</a></li>
+           </ul>
+       </div>
+
+       <div class="footer-paragraph">
+        <h1 class="location">Location-track.</h1>
+       <i class="fa fa-map-marker" aria-hidden="true"></i>
+      <h3>IIIT Bhagalpur</h3>
+      <p>College of Engineering Campus, Sabour,<br> Bhagalpur, Bihar 813210</p>
+   </div>
+    </div>
+</footer>
+
+</body>
+</html> 
+
+
+
+

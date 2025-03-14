@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img class="t" src="../assets/images/image_2.png" alt="Swasthya Kiran Logo">
+            </a>
+            <ul class="nav-links">
+              <li><a href="/home" data-key="home">Home</a></li>
+              <li><a href="/service" data-key="services">Services</a></li>
+              <li><a href="/docter" data-key="doctors">Doctors</a></li>
+              <li><a href="/haspit" data-key="hospitals">Hospitals</a></li>
+              <li><a href="/about" data-key="about_us">About Us</a></li>
+              <li><a href="/details" data-key="details">Details</a></li>
+              <li><a href="./contactus" data-key="contact_us">Contact Us</a></li>
+          </ul>
+          
+          <select id="language-selector">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+          </select>
+          
+          <a href="/appoiment" class="appointment-btn" data-key="appointment">Appointment</a>
+          
+
+
+            
+            <!-- Cart Dropdown -->
+            <div class="cart-container">
+                <a href="#" class="cart-btn">Cart</a>
+                <ul class="cart-dropdown">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/service">Services</a></li>
+                    <li><a href="/docter">Doctors</a></li>
+                    <li><a href="/haspit">Hospitals</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/signup">SignUp</a></li>
+                    <li><a href="/signin">SignIn</a></li>
+                    <li><a href="/otp">Otp</a></li>
+                    <li><a href="./details">Details</a></li>
+                    <li><a href="./contactus">Contact-Us</a></li>
+                    <li><a href="/appoiment">Appointment</a></li>
+                </ul>
+            </div>
+            <img class="search-icon" src="../assets/seatch.jpeg" alt="Search">
+            <!-- Search Form (Initially hidden) -->
+            <div class="search-form" style="display: none;">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-btn" onclick="performSearch()">Search</button>
+            </div>
+        </nav>
+    </header>
+    
+    
+<script>
+    document.querySelector('.search-icon').addEventListener('click', function() {
+    var searchForm = document.querySelector('.search-form');
+    if (searchForm.style.display === 'none' || searchForm.style.display === '') {
+        searchForm.style.display = 'flex'; // Show the search form
+    } else {
+        searchForm.style.display = 'none'; // Hide the search form
+    }
+});
+
+// Function to perform search (for now it just logs the input)
+function performSearch() {
+    var query = document.getElementById('search-input').value;
+    if (query) {
+        console.log('Searching for: ' + query);
+        // Add your search logic here
+    } else {
+        alert('Please enter a search term');
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const langSelector = document.getElementById("language-selector");
+    const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
+    
+    // Set saved language in dropdown
+    langSelector.value = savedLanguage;
+
+    // Function to load and apply translations
+    function loadLanguage(lang) {
+        fetch("/languages/languages.json")
+            .then(response => response.json())
+            .then(data => {
+                document.querySelectorAll("[data-key]").forEach(element => {
+                    const key = element.getAttribute("data-key");
+                    if (data[lang] && data[lang][key]) {
+                        element.textContent = data[lang][key];
+                    }
+                });
+
+                // Save selected language
+                localStorage.setItem("selectedLanguage", lang);
+            })
+            .catch(error => console.error("Error loading language data:", error));
+    }
+
+    // Apply saved language on page load
+    loadLanguage(savedLanguage);
+
+    // Change language on dropdown change
+    langSelector.addEventListener("change", function () {
+        loadLanguage(this.value);
+    });
+});
+
+
+
+
+</script>    
+    
+
+    <main>
+        <!-- Hero Section with Background Image -->
+        <section class="hero">
+            <div class="hero-content">
+              <h1 data-key="hero_title">Bed Management Software Simplified</h1>
+              <p data-key="hero_subtitle">Maximize occupancy rates with an easy-to-use bed management system.</p>
+              <a href="/signup" class="btn" data-key="get_started">Get Started</a>
+            </div>
+        </section>
+    
+        <!-- Content Section -->
+        <section class="content1">
+            <h2 data-key="content1_title">Improve Utilization Rates, Maximize Bed Revenue, and Leverage Expected Occupancy Projections</h2>
+            <p data-key="content1_description">"A Bed Management System website helps hospitals efficiently manage patient bed assignments,
+              ensuring optimal bed utilization and reducing wait times. With real-time tracking of bed availability,
+              it improves hospital workflow, enhances patient care, and enables better resource management,
+              all while streamlining communication between staff for faster decision-making and smoother patient transitions."</p>
+            <div class="image-row animate">
+              <div class="image-container">
+                <img src="../assets/images/download_9.jpeg" alt="Image 1">
+                <div class="overlay-text">Cardiothoracic Surgery</div>
+              </div>
+              <div class="image-container">
+                <img src="../assets/images/image.jpeg" alt="Image 2">
+                <div class="overlay-text">Orthopedic Surgery</div>
+              </div>
+              <div class="image-container">
+                <img src="../assets/images/rectangle_13.jpeg" alt="Image 3">
+                <div class="overlay-text">Plastic and Reconstructive Surgery</div>
+              </div>
+              <div class="image-container">
+                <img src="../assets/images/whats_app_image_20240905_at_81050_pm_1.jpeg" alt="Image 4">
+                <div class="overlay-text">General Surgery</div>
+              </div>
+              <div class="image-container">
+                <img src="../assets/images/whats_app_image_20240905_at_81203_pm_1.jpeg" alt="Image 5">
+                <div class="overlay-text">Neurosurgery</div>
+              </div>
+              <!-- <div class="image-container">
+                <img src="../assets/images/whats_app_image_20240905_at_231046_c_34_de_6901.jpeg" alt="Image 6">
+                <div class="overlay-text">Ophthalmic Surgery</div>
+              </div> -->
+            </div>
+          </section> 
+
+          <!-- Content Section -->
+          <section class="content2">
+            <div class="left-bg"></div> <!-- Background Image -->
+            <div class="right-content">
+              <h2>Manage. Monitor. Maximize Your Beds.</h2>
+              <!-- <p>
+                Our bed management software empowers the facility’s administrators and admissions team to quickly:
+              </p> -->
+              <ul class="li-tag">
+                <li>* Manage multiple facilities</li>
+                <li>* Monitor projected occupancy rates</li>
+                <li>* Improve bed utilization rates</li>
+                <li>* Improve care coordination for efficient patient placement and planning</li>
+                <li>* Minimize wait times for patients</li>
+                <li>* Reduce costs of unutilized beds</li>
+                <li>* Connects with your existing PM/EMR</li>
+              </ul>
+              <a href="/signup" class="cta-button">GET STARTED</a> <!-- Clickable Button -->
+            </div>
+          </section>
+          
+          <section class="content2">
+            <div class="left-content">
+              <h2>Admissions Dashboard</h2>
+              <p> Organize and sort patients by location, level of care, and admission status to ensure smooth operations and optimal resource allocation.
+                 Enhance decision-making with structured data insights,
+                  reducing delays and improving patient care..</p>
+              <a href="/signup" class="cta-button">GET STARTED</a>
+            </div>
+            <div class="right-bg"></div> <!-- Background Image -->
+          </section>
+          
+          <section class="content2">
+            <div class="left-bg"></div> <!-- Background Image -->
+            <div class="right-content">
+              <h2>Projected Occupancy Dashboard.</h2>
+              <p>
+                Gain real-time insights into occupancy rates across all facilities, enabling proactive resource management,
+                 minimizing bottlenecks, and ensuring optimal patient care.This version highlights real-time tracking,
+                  proactive management, and improved care, making it more engaging. Let me know if you need further refinements! 🚀
+              </p>
+            
+              <a href="/signup" class="cta-button">GET STARTED</a> <!-- Clickable Button -->
+            </div>
+          </section>
+
+          <section class="content2">
+             <div class="left-icons">
+              <a href="https://wa.me/your-number" target="_blank">
+                <img src="https://files.oaiusercontent.com/file-ADKyzCyupov4EU68u22PLC?se=2025-03-12T05%3A20%3A25Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D7e66e048-16cf-45d1-a695-67fd5dbd4db7.webp&sig=i7kCSupkV1llY/HfMHknMES6MvSlmBpXbuTH%2BmdMzms%3D" alt="WhatsApp">
+              </a>
+              <!-- <a href="https://github.com/your-profile" target="_blank">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.QRI_QED08EYwqgQP92UivwHaHa&pid=Api&P=0&h=220" alt="GitHub">
+              </a>
+              <a href="https://instagram.com/your-profile" target="_blank">
+                <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Instagram_svg-256.png" alt="Instagram">
+              </a> -->
+            </div>
+
+
+
+            <div > 
+              
+              <!-- <p class="right-content22">
+                 ADS abou hospital
+                 
+              </p> -->
+
+               <!-- Video Section -->
+    <div class="video-container">
+      <h1 class="video">About Hospitals Management..</h1>
+      <video controls>
+        <source src="https://v.ftcdn.net/02/32/61/72/700_F_232617268_8HcaHuKCA1J6kUIzT3ruCPKGJO0tWm4U_ST.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div> 
+            </div>
+          </section>
+          
+          
+
+          <section class="content5">
+            <div class="image-row">
+              <div class="image-container" data-address="123 Heart St, New York, NY">
+                <div class="overlay-text">Cardiothoracic Surgery</div>
+                <div class="address-tooltip">123 Heart St, New York, NY</div>
+            </div>
+            <div class="image-container" data-address="45 Ortho Lane, Los Angeles, CA">
+                <div class="overlay-text">Orthopedic Surgery</div>
+                <div class="address-tooltip">45 Ortho Lane, Los Angeles, CA</div>
+            </div>
+            <div class="image-container" data-address="67 Reconstruct Ave, Chicago, IL">
+                <div class="overlay-text">Plastic and Reconstructive Surgery</div>
+                <div class="address-tooltip">67 Reconstruct Ave, Chicago, IL</div>
+            </div>
+            <div class="image-container" data-address="89 General Blvd, Houston, TX">
+                <div class="overlay-text">General Surgery</div>
+                <div class="address-tooltip">89 General Blvd, Houston, TX</div>
+            </div>
+            <div class="image-container" data-address="22 Neuro Way, Miami, FL">
+                <div class="overlay-text">Neurosurgery</div>
+                <div class="address-tooltip">22 Neuro Way, Miami, FL</div>
+            </div>
+            <div class="image-container" data-address="10 Eye Care St, San Francisco, CA">
+                <div class="overlay-text">Ophthalmic Surgery</div>
+                <div class="address-tooltip">10 Eye Care St, San Francisco, CA</div>
+            </div>      
+            </div>
+        </section>
+
+    </main>
+    <script>
+    document.querySelector('.cart-btn').addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default link behavior
+        const dropdown = document.querySelector('.cart-dropdown');
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+</script>
+    <footer>
+        <div class="footer-content">
+            <div class="telephone-section">
+                     <h1 class="contact">Contact-us.</h1>
+                <div class="tel">
+                    <img class="telp" src="../assets/telephone.jpeg" alt="Telephone">
+                    <p>(+254) 717 783 146</p>
+                </div>
+            
+                <!-- Social Media Icons -->
+                <div class="social-media">
+                    
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/+254717783146" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+        <div class="paragraph">
+            <h1 class="ambulance">Ambulance-service.</h1>
+            <i class="fa fa-ambulance" aria-hidden="true"></i>
+              <p>+91-9170879945,<br> +91-9170879976 <br>+91-9167876543</p>
+        </div>
+        
+            <div class="footer-paragraph">
+                <h1 class="location">Link.</h1>
+               <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/service">Services</a></li>
+                <li><a href="/docter">Doctors</a></li>
+                <li><a href="/haspit">Hospitals</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/signup">SignUp</a></li>
+                <li><a href="/signin">SignIn</a></li>
+                <li><a href="/otp">Otp</a></li>
+                <li><a href="./details">Details</a></li>
+               </ul>
+           </div>
+
+           <div class="footer-paragraph">
+            <h1 class="location">Location-track.</h1>
+           <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <h3>IIIT Bhagalpur</h3>
+          <p>College of Engineering Campus, Sabour,<br> Bhagalpur, Bihar 813210</p>
+       </div>
+        </div>
+    </footer>
+
+</body>
+</html>

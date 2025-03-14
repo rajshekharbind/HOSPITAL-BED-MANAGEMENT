@@ -1,0 +1,55 @@
+{
+   "en": {
+      "hero_title": "Bed Management Software Simplified",
+      "hero_subtitle": "Maximize occupancy rates with an easy-to-use bed management system.",
+      "get_started": "Get Started",
+      "content1_title": "Improve Utilization Rates, Maximize Bed Revenue, and Leverage Expected Occupancy Projections",
+      "content1_description": "A Bed Management System website helps hospitals efficiently manage patient bed assignments, ensuring optimal bed utilization and reducing wait times. With real-time tracking of bed availability, it improves hospital workflow, enhances patient care, and enables better resource management, all while streamlining communication between staff for faster decision-making and smoother patient transitions.",
+      "home":"home",
+      "services": "Services",
+      "doctors": "Doctors",
+      "hospitals": "Hospitals",
+      "about_us": "About Us",
+      "details": "Details",
+      "contact_us": "Contact Us",
+      "appointment": "Appointment"
+    },
+    "hi": {
+      "hero_title": "बेड प्रबंधन सॉफ़्टवेयर सरल",
+      "hero_subtitle": "एक उपयोग में आसान बेड प्रबंधन प्रणाली के साथ अधिभोग दरों को अधिकतम करें।",
+      "get_started": "शुरू करें",
+      "content1_title": "उपयोग दरों में सुधार करें, बेड राजस्व अधिकतम करें, और अपेक्षित अधिभोग प्रक्षेपण का लाभ उठाएं",
+      "content1_description": "एक बेड प्रबंधन प्रणाली वेबसाइट अस्पतालों को रोगी बेड असाइनमेंट को कुशलतापूर्वक प्रबंधित करने में मदद करती है, इष्टतम बेड उपयोग सुनिश्चित करती है और प्रतीक्षा समय को कम करती है। बेड उपलब्धता की वास्तविक समय ट्रैकिंग के साथ, यह अस्पताल के वर्कफ़्लो में सुधार करता है, रोगी देखभाल को बढ़ाता है, और बेहतर संसाधन प्रबंधन को सक्षम करता है, जबकि कर्मचारियों के बीच संचार को सरल बनाकर त्वरित निर्णय लेने और सहज रोगी संक्रमण की अनुमति देता है।",
+      "home": "होम",
+      "services": "सेवाएँ",
+      "doctors": "डॉक्टर",
+      "hospitals": "अस्पताल",
+      "about_us": "हमारे बारे में",
+      "details": "विवरण",
+      "contact_us": "संपर्क करें",
+      "appointment": "नियुक्ति"
+    },
+    "fr": {
+      "home": "Accueil",
+      "service": "Services",
+      "docter": "Médecins",
+      "haspit": "Hôpitaux",
+      "about": "À propos de nous",
+      "details": "Détails",
+      "contactus": "Contactez-nous",
+      "appointment": "Rendez-vous"
+    },
+    "es": {
+      "home": "Inicio",
+      "service": "Servicios",
+      "docter": "Doctores",
+      "haspit": "Hospitales",
+      "about": "Sobre nosotros",
+      "details": "Detalles",
+      "contactus": "Contáctanos",
+      "appointment": "Cita"
+    }
+  }
+  
+ 
+  

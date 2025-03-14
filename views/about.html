@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Swasthya Kiran</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <img class="t" src="../assets/images/image_2.png" alt="Swasthya Kiran Logo">
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/service">Services</a></li>
+            <li><a href="/doctor">Doctors</a></li>
+            <li><a href="/haspit">Hospitals</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contactus">Contact Us</a></li>
+        </ul>
+
+        <!-- Search Container -->
+        <div class="search-container">
+            <div class="search-form">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-btn" onclick="performSearch()">Search</button>
+            </div>
+            <!-- <div class="search-form" style="display: none;">
+              <input type="text" id="search-input" placeholder="Search...">
+              <button id="search-btn" onclick="performSearch()">Search</button>
+          </div> -->
+            <img class="search-icon" src="../assets/seatch.jpeg" alt="Search">
+        </div>
+
+        <!-- Appointment Button -->
+        <!-- <a href="#" class="appointment-btn">Appointment</a> -->
+    </nav>
+</header>
+
+
+    
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const searchIcon = document.querySelector(".search-icon");
+    const searchForm = document.querySelector(".search-form");
+    const searchInput = document.getElementById("search-input");
+
+    // Load the stored search query (if any)
+    searchInput.value = localStorage.getItem("searchQuery") || "";
+
+    // Toggle search form visibility when clicking the search icon
+    searchIcon.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevent immediate hiding
+        searchForm.classList.toggle("active");
+        searchInput.focus();
+    });
+
+    // Hide search form when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!searchForm.contains(event.target) && !searchIcon.contains(event.target)) {
+            searchForm.classList.remove("active");
+        }
+    });
+
+    // Store search query in local storage
+    searchInput.addEventListener("input", function () {
+        localStorage.setItem("searchQuery", searchInput.value);
+    });
+
+    // Function to perform search
+    function performSearch() {
+    var searchInput = document.getElementById("search-input");
+    var query = searchInput.value.trim();
+
+    if (query) {
+        console.log("Searching for: " + query);
+
+        // Clear the input field after search
+        searchInput.value = "";
+
+        // Remove stored search query from localStorage (optional)
+        localStorage.removeItem("searchQuery");
+    } else {
+        alert("Please enter a search term");
+    }
+}
+
+
+
+    
+
+    // Attach search function to the button
+    document.getElementById("search-btn").addEventListener("click", performSearch);
+});
+
+    
+    </script> 
+
+
+
+    <!-- <div class="dashboard-container">
+        <aside>
+            <div class="user-profile">
+                <img src="../assets/images/ellipse_1.png" alt="User">
+                <div class="us">
+                    <p>RAJ SHEKHAR</p>
+                    <p >Free Account</p>
+                </div>
+                
+            </div>
+            <ul class="side-menu">
+                <li><a href="#">Overview</a></li>
+                <li><a href="/service">Services</a></li>
+                <li><a href="/docter">Doctors</a></li>
+                <li><a href="../HtmlSheet/hospital.html">Medical History</a></li>
+                <li><a href="#" class="active">Active Case</a></li>
+            </ul>
+        </aside> -->
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Your Stability and Reliability Source for Healthcare Solutions Since 1977..</h1>
+                    <p>Maximize occupancy rates with an easy-to-use bed management system..</p> 
+                    <!-- <a href="/signup" class="btn">Get Started</a>  -->
+                </div>
+            </section>
+            
+            <section class="content2">
+                <div class="left-bg1"></div> <!-- Background Image -->
+                <div class="right-content">
+                  <h2>Our Story.</h2>
+                  <p>
+                    Advanced Data Systems Corporation (ADS) presents an almost peerless story in healthcare automation evolution. We began in 1977 and have never changed our name, have never been involved in acquisitions or mergers, and have never discontinued a product. Our clients love the loyalty factor, and the fact that we've remained an independent, privately-owned company that's highly accessible by them. ADS is debt-free and self-contained with our own programmers, and with our own implementations, training, support and IT departments.
+                  </p>
+                
+                  <a href="/signup" class="cta-button">GET STARTED</a> <!-- Clickable Button -->
+                </div>
+              </section>
+
+            <!-- <section class="about-section">
+
+                <div class="vision-mission">
+                    <div class="vision">
+                        <img src="../assets/images/image.png" alt="Vision">
+                        <h3>OUR VISION</h3>
+                        <p>To be the specialised healthcare provider of choice for every patient</p>
+                    </div>
+                    <div class="mission">
+                        <img src="../assets/images/whats_app_image_20240905_at_81203_pm_1.jpeg " alt="Mission">
+                        <h3>OUR MISSION</h3>
+                        <p>To serve society with the highest level of healthcare and best experience</p>
+                    </div>
+                </div>
+                       
+                <div class="other-values">
+                    <div class="saved-lives">
+                        <img src="../assets/images/whats_app_image_20240905_at_231046_c_34_de_6901.jpeg" alt="Saved Lives">
+                        <h3>SAVED LIVES</h3>
+                        <p>Over thousands of satisfied users who found us helpful</p>
+                    </div>
+                    <div class="transparency">
+                        <img src="../assets/images/download_1.png" alt="Transparency">
+                        <h3>TRANSPARENCY</h3>
+                        <p>It fuels our commitment to user-centric service through open data sharing</p>
+                    </div>
+                </div>
+            </section> -->
+
+            <section class="stats-section">
+                <h2>ADS by the Numbers</h2>
+                <div class="stats-container">
+                  <div class="stat-item">
+                    <h3>45+</h3>
+                    <p>Years in Business</p>
+                  </div>
+                  <div class="stat-item">
+                    <h3>300+</h3>
+                    <p>ADS Employees & Growing!</p>
+                  </div>
+                  <div class="stat-item">
+                    <h3>98%+</h3>
+                    <p>Clean Claims on First Submission</p>
+                  </div>
+                  <div class="stat-item">
+                    <h3>55M+</h3>
+                    <p>EDI Transactions Annually</p>
+                  </div>
+                </div>
+              </section>
+              <section class="founder-story">
+                <div class="content">
+                  <h2>Founder's Story</h2>
+                  <p>
+                    David Barzillai, ADS’ founder, was trained as an electrical engineer and served in the Israeli Air Force.
+                  </p>
+                  <p>
+                    He came to the US with his wife, Sara, in the early 1970s as an engineer for a company that had some radiology practices as clients. One of them asked David if he could produce a patient demographics database for them. Working nights and weekends, he did it. Other radiology practices heard about it and approached David as well.
+                  </p>
+                  <p>
+                    Soon, David was creating software for dozens of radiology practices, and in 1977, Advanced Data Systems (ADS) was born in their NYC apartment. Today, ADS occupies the 15,000-square-foot ADS Building with over 300 employees. Thanks to our clients, we’re a classic American success story!
+                  </p>
+                  <a href="#" class="cta-button">VIEW OUR HISTORY</a>
+                </div>
+                <div class="image">
+                  <img src="../assets/photoimg1.jpg" alt="David Barzillai">
+                </div>
+              </section>
+
+              <section class="people-culture">
+                <div class="image">
+                  <img src="https://www.shutterstock.com/shutterstock/photos/2272920447/display_1500/stock-photo-successful-team-of-medical-doctors-standing-in-hospital-2272920447.jpg" alt="Our People & Culture">
+                </div>
+                <div class="content">
+                  <h2>Our People & Culture</h2>
+                  <p>
+                    The people are the “heart and soul” of ADS and make our company what it is. We hire hardworking and passionate people who want to be in an environment that fosters an entrepreneurial spirit. We strive to maintain an open culture in which everyone contributes and feels empowered to share ideas and opinions.
+                  </p>
+                  <a href="#" class="cta-button">VIEW OUR CAREERS</a>
+                </div>
+              </section>
+
+
+              <section class="services">
+                <h1>Our Senior Executive Team</h1>
+                <p>We provide one of the best supports in medical aspects</p>
+                
+                <div class="service-cards">
+                  <div class="card">
+                    <div class="icon">
+                      <img src="https://tse4.mm.bing.net/th?id=OIP.s3mQLGK7nHMzwrv3BNgQTAHaEl&pid=Api&P=0&h=220" alt="24/7 Support">
+                    </div>
+                    <h3>24/7 support</h3>
+                    <p>Our website provides 24/7 access to real-time information on doctor availability, bed availability, and emergency services.</p>
+                    <a href="https://www.sequencehealth.com/blog/the-impact-of-24-7-medical-call-centers-on-patient-access-and-satisfaction">Read More →</a>
+                   
+                  </div>
+                  <div class="card">
+                    <div class="icon">
+                      <img src="https://tse3.mm.bing.net/th?id=OIP.gwCh3Rc9WBLvOBdR0Bbu9wHaFH&pid=Api&P=0&h=220" alt="Book Beds">
+                    </div>
+                    <h3>Book Beds</h3>
+                    <p>We make the process easier by providing real-time information on bed availability across hospitals in your area.</p>
+                    <a href="https://www.uzzmed.com/types-of-hospital-beds/">Read More →</a>
+                  </div>
+                  <div class="card">
+                    <div class="icon">
+                      <img src="https://tse2.mm.bing.net/th?id=OIP.pDFeeMmtwJ6uruwvbvlItQHaE7&pid=Api&P=0&h=220" alt="Featured Hospitals">
+                    </div>
+                    <h3>Featured Hospitals</h3>
+                    <p>The hospitals have been carefully selected based on criteria, including patient satisfaction and specialized services.</p>
+                    <a href="https://www.rasmussen.edu/degrees/health-sciences/blog/types-of-healthcare-facilities/">Read More →</a>
+                  </div>
+                  <div class="card">
+                    <div class="icon">
+                      <img src="https://tse3.mm.bing.net/th?id=OIP.S6WKxdRHtGQZ6xMrtMQ1IAHaEK&pid=Api&P=0&h=220" alt="Compare Hospitals">
+                    </div>
+                    <h3>Compare Hospitals</h3>
+                    <p>Our platform simplifies the process by providing tools to compare top-rated hospitals in your area.</p>
+                    <a href="https://www.medicare.gov/care-compare/?redirect=true&providerType=Hospital">Read More →</a>
+                  </div>
+                </div>
+              </section>
+              
+                            
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="telephone-section">
+                     <h1 class="contact">Contact-us.</h1>
+                <div class="tel">
+                    <img class="telp" src="../assets/telephone.jpeg" alt="Telephone">
+                    <p>(+254) 717 783 146</p>
+                </div>
+            
+                <!-- Social Media Icons -->
+                <div class="social-media">
+                    
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/+254717783146" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+        <div class="paragraph">
+            <h1 class="ambulance">Ambulance-service.</h1>
+            <i class="fa fa-ambulance" aria-hidden="true"></i>
+              <p>+91-9170879945,<br> +91-9170879976 <br>+91-9167876543</p>
+        </div>
+        
+            <div class="footer-paragraph">
+                <h1 class="location">Link.</h1>
+               <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/service">Services</a></li>
+                <li><a href="/docter">Doctors</a></li>
+                <li><a href="/haspit">Hospitals</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/signup">SignUp</a></li>
+                <li><a href="/signin">SignIn</a></li>
+                <li><a href="/otp">Otp</a></li>
+                <li><a href="./details">Details</a></li>
+               </ul>
+           </div>
+
+           <div class="footer-paragraph">
+            <h1 class="location">Location-track.</h1>
+           <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <h3>IIIT Bhagalpur</h3>
+          <p>College of Engineering Campus, Sabour,<br> Bhagalpur, Bihar 813210</p>
+       </div>
+        </div>
+    </footer>
+</body>
+</html>

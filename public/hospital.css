@@ -1,0 +1,871 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    color: #333;
+}
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #d0f1f7;
+}
+
+.emergency,
+.contact-info {
+    color: #008080;
+    font-size: 14px;
+}
+.telp{
+    width:20px;
+  height:20px; 
+  border-radius:50%;
+
+}
+.tel{
+    display:flex;
+}
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+/* .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #32c1e9;
+}
+.navbar a {
+    text-decoration: none;
+    color: #00796b;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 20px;
+  }
+.navbar a.active,
+.navbar a:hover {
+  background-color: #004d40;
+  color: white;
+}
+
+.navbar .logo img {
+    height: 50px;
+
+}
+.t{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-right:400px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+   contact-between: space-between;
+}
+.search-icon{
+    width:30px;
+    height:30px; 
+    display: flex;
+    //gap: 15px;
+   space-between:12px;
+   border-radius:50%;
+}
+.appointment-btn {
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: #000;
+   
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius:10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#search-input {
+    padding: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#search-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    //background-color: #b3e5fc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.appointment-btn {
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+} */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #32c1e9;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #00796b;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 20px;
+  }
+.navbar a.active,
+.navbar a:hover {
+  background-color: #004d40;
+  color: white;
+}
+.navbar .logo img {
+    height: 50px;
+
+}
+.t{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+   contact-between: space-between;
+}
+
+.dashboard-container {
+    display: flex;
+    padding: 20px;
+    background-color: #333333;
+
+
+}
+
+aside {
+    width: 20%;
+    background-color: #eef7ff;
+    padding: 20px;
+}
+
+.user-profile {
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+.user-profile img {
+    width: 100px;
+    height:90px;
+    border-radius: 50%;
+    margin-left:10px;
+   
+}
+
+
+.side-menu {
+    list-style-type: none;
+    //height:70px;
+    //width:70px;
+}
+
+.side-menu li {
+    margin-bottom: 15px;
+}
+
+.side-menu a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.side-menu .active {
+    background-color: #536dfe;
+    color: white;
+}
+
+.about-section {
+    width: 80%;
+    padding: 20px;
+    margin-left:100px;
+}
+
+.vision-mission, .other-values {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.vision, .mission, .saved-lives, .transparency {
+    text-align: center;
+    width: 45%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.vision img, .mission img, .saved-lives img, .transparency img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    min-height: 100px;
+}
+.footer paragraph{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* Flexbox layout for footer-content */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribute space between left and right sections */
+    align-items: center; /* Center vertically */
+}
+
+.telephone-section {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align content to the left */
+}
+.contact{
+    color: #fff; /* White text for headings */
+    text-align: center;  /* Center-align the heading */
+    font-size: 2em;  /* Increase the size for emphasis */
+    font-weight: bold;  /* Bold text for added impact */
+    //text-transform: uppercase;  /* Uppercase letters for a bold appearance */
+    letter-spacing: 1px;  /* Slightly increase letter spacing */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Add a subtle shadow for depth */
+    margin-top: 50px;  /* Add top margin to give space */
+    margin-bottom: 20px; 
+    
+}
+
+.tel {
+    display: flex;
+    align-items: center; /* Center the telephone content vertically */
+    margin-left:50px;
+}
+
+.telp {
+    width: 30px; /* Set the width of the telephone icon */
+    height: 30px; /* Set the height of the telephone icon */
+    margin-right: 10px; /* Space between the icon and the phone number */
+    color: #fff; 
+}
+
+.social-media {
+    margin-top: 10px; /* Space between the telephone section and the social icons */
+    display: flex;
+    gap: 15px; /* Space between icons */
+    margin-left:50px;
+}
+
+.social-media a {
+    color: white;/* Icon color */
+    font-size: 24px; /* Adjust the size of the icons */
+    text-decoration: none; /* Remove the underline */
+}
+
+.social-media a:hover {
+    color: #1da1f2; /* Twitter blue color when hovered */
+}
+ .location{
+    color: #fff; /* White text for headings */
+   text-align: center;  /* Center-align the heading */
+    font-size: 2em;  /* Increase the size for emphasis */
+   font-weight: bold;  /* Bold text for added impact */
+   // text-transform: uppercase;  /* Uppercase letters for a bold appearance */
+    letter-spacing: 1px;  /* Slightly increase letter spacing */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Add a subtle shadow for depth */
+    margin-top: 0px;  /* Add top margin to give space */
+   margin-bottom: 2px;
+  
+} 
+
+.footer-paragraph {
+    text-align: center;
+    margin-top: 20px;
+}
+.footer-paragraph a{
+    color:white;
+}
+.footer-paragraph h3 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.footer-paragraph p {
+    color: #fff;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Icon styling */
+.footer-paragraph i {
+    font-size: 2em;
+    color: #ff5722; /* Orange color for map icon */
+    margin-right: 10px;
+}
+
+.ambulance{
+    color: #fff;  White text for headings */
+   text-align: center;  /* Center-align the heading */
+    font-size: 2em;  /* Increase the size for emphasis */
+   font-weight: bold;  /* Bold text for added impact */
+   // text-transform: uppercase;  /* Uppercase letters for a bold appearance */
+    letter-spacing: 1px;  /* Slightly increase letter spacing */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Add a subtle shadow for depth */
+    margin-top: 0px;  /* Add top margin to give space */
+   margin-bottom: 2px;
+  
+} 
+.paragraph {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.paragraph h3 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.paragraph p {
+    color: #fff;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Icon styling */
+ .paragraph i {
+    font-size: 2em;
+    color: #ff5722; /* Orange color for map icon */
+    margin-right: 10px;
+} 
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #32c1e9;
+    color: white;
+    width: 100%;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #00796b;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 20px;
+  }
+.navbar a.active,
+.navbar a:hover {
+  background-color: #004d40;
+  color: white;
+}
+
+.navbar .logo img {
+    height: 50px;
+
+}
+/* Logo Styling */
+.logo img {
+    height: 80px;
+    width:80px;
+    border-radius:50%;
+
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #b3e5fc;
+}
+
+/* Search Container */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Search Icon */
+.search-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius:50%;
+}
+
+/* Search Form (Initially Hidden) */
+.search-form {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #b3e5fc;
+    padding: 8px;
+    border-radius: 10px;
+    border: 2px solid black;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Search Input */
+#search-input {
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+}
+
+/* Search Button */
+#search-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Appointment Button */
+.appointment-btn {
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+} 
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .search-form {
+        position: static;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #search-input {
+        width: 100%;
+    }
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-image: url('../assets/1282824.jpg');
+    background-size: cover;
+    background-position: center;
+    color: black; /* Text color for visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    
+}
+
+.hero-content {
+    max-width: 800px; /* Optional: Limit the width of content */
+    z-index: 10; /* Ensure text is above background */
+}
+
+.hero h1 {
+  
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero p {
+    
+    font-size: 1.6rem;
+    margin: 20px 0;
+    color:red;
+}
+/* .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hospital-image.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+} */
+
+.btn-explore {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #ff4c4c;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-explore:hover {
+    background: #cc0000;
+}
+
+/* Search Container */
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Search Icon */
+.search-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 50%;
+}
+
+/* Search Form (Initially Hidden) */
+.search-form {
+    position: absolute;
+    top: 50%;
+    left: 40px; /* Ensures it appears just to the right of the icon */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #b3e5fc;
+    padding: 8px;
+    border-radius: 10px;
+    border: 2px solid black;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-20px);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Show search form when active */
+.search-form.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(10px); /* Moves slightly to the right */
+}
+
+/* Search Input */
+#search-input {
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    width: 180px;
+    outline: none;
+    background-color: white;
+    color: black;
+}
+
+/* Search Button */
+#search-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.content1 {
+    background: url('../assets/images/image_7.png') no-repeat center center/cover;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Image Row - Flexbox for Responsiveness */
+  .image-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    gap: 20px;
+  }
+  
+  /* Image Container */
+  .image-container {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Hover Effect */
+  .image-container:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Overlay Text */
+  .overlay-text {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  /* Address Tooltip (Hidden by Default) */
+  .address-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+  }
+  
+  /* Show Tooltip on Hover */
+  .image-container:hover .address-tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .image-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-container {
+        width: 80%;
+    }
+}
+
+/* Hero Section */
+.hero1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   height:900px;
+    /* Change this to an actual image */
+    background-size: cover;
+    background-position: center;
+    color: black;
+    padding: 20px;
+    
+    background-color:#7dd3fc;
+      
+    
+}
+
+/* Hero Content */
+.hero-content1 {
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Headline */
+.hero-content1 h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    //text-decoration: underline;
+    display: inline-block;
+    border-bottom: 3px solid #ff4c4c; /* Adjust color & thickness */
+    padding-bottom: 5px;
+}
+
+/* Paragraph */
+.hero-content1 p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Call to Action Button */
+.btn-explore1 {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #ff4c4c;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn-explore1:hover {
+    background: #cc0000;
+   
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero1 {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .hero-content1 h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content1 p {
+        font-size: 1rem;
+    }
+
+    .btn-explore1 {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+

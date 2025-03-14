@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Swasthya Kiran</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="hospital.css">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img class="t" src="../assets/images/image_2.png" alt="Swasthya Kiran Logo">
+            </a>
+    
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/service">Services</a></li>
+                <li><a href="/docter">Doctors</a></li>
+                <li><a href="/haspit">Hospitals</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contactus">Contact Us</a></li>
+            </ul>
+    
+
+            <!-- Search Container -->
+
+
+               <!-- Search Container -->
+          <div class="search-container">
+            <div class="search-form">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-btn" onclick="performSearch()">Search</button>
+            </div> 
+            <!-- <div class="search-form" style="display: none;">
+              <input type="text" id="search-input" placeholder="Search...">
+              <button id="search-btn" onclick="performSearch()">Search</button>
+          </div> -->
+             <img class="search-icon" src="../assets/seatch.jpeg" alt="Search">
+        </div> 
+    
+            <!-- Appointment Button -->
+             <a href="#" class="appointment-btn">Appointment</a> 
+        </nav>
+    </header>
+    
+        
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const searchIcon = document.querySelector(".search-icon");
+          const searchForm = document.querySelector(".search-form");
+          const searchInput = document.getElementById("search-input");
+        
+          // Load the stored search query (if any)
+          searchInput.value = localStorage.getItem("searchQuery") || "";
+        
+          // Toggle search form visibility when clicking the search icon
+          searchIcon.addEventListener("click", function (event) {
+              event.stopPropagation(); // Prevent immediate hiding
+              searchForm.classList.toggle("active");
+              searchInput.focus();
+          });
+        
+          // Hide search form when clicking outside
+          document.addEventListener("click", function (event) {
+              if (!searchForm.contains(event.target) && !searchIcon.contains(event.target)) {
+                  searchForm.classList.remove("active");
+              }
+          });
+        
+          // Store search query in local storage
+          searchInput.addEventListener("input", function () {
+              localStorage.setItem("searchQuery", searchInput.value);
+          });
+        
+          // Function to perform search
+          function performSearch() {
+          var searchInput = document.getElementById("search-input");
+          var query = searchInput.value.trim();
+        
+          if (query) {
+              console.log("Searching for: " + query);
+        
+              // Clear the input field after search
+              searchInput.value = "";
+        
+              // Remove stored search query from localStorage (optional)
+              localStorage.removeItem("searchQuery");
+          } else {
+              alert("Please enter a search term");
+          }
+        }
+        
+        
+        
+          
+        
+          // Attach search function to the button
+          document.getElementById("search-btn").addEventListener("click", performSearch);
+        });
+        
+        document.addEventListener("DOMContentLoaded", function () {
+          const headers = document.querySelectorAll(".accordion-header");
+        
+          headers.forEach(header => {
+            header.addEventListener("click", function () {
+              const content = this.nextElementSibling;
+        
+              // Toggle content visibility
+              if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+        
+              // Close other open sections
+              document.querySelectorAll(".accordion-content").forEach(otherContent => {
+                if (otherContent !== content) {
+                  otherContent.style.display = "none";
+                }
+              });
+            });
+          });
+        });
+        
+         
+        
+        
+        </script> 
+
+    <!-- <div class="dashboard-container">
+        <aside>
+            <div class="user-profile">
+                <img src="../assets/images/ellipse_1.png" alt="User">
+                <p>RAJ SHEKHAR</p>
+                <p>Free Account</p>
+            </div>
+            
+                <ul class="side-menu">
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="/service">Services</a></li>
+                    <li><a href="/docter">Doctors</a></li>
+                    <li><a href="../HtmlSheet/">Medical History</a></li>
+                    <li><a href="#" class="active">Active Case</a></li>
+                </ul>
+           
+             <ul class="side-menu">
+                <li><a href="#">Overview</a></li>
+                <li><a href="/service">Services</a></li>
+                <li><a href="/docter">Doctors</a></li>
+                <li><a href="../HtmlSheet/">Medical History</a></li>
+                <li><a href="#" class="active">Active Case</a></li>
+            </ul> -->
+        </aside>
+
+        <main>
+
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Your Health, Our Priority</h1>
+                    <p>Experience world-class healthcare with cutting-edge technology, expert doctors, and compassionate care.  
+                    From emergency services to specialized treatments, we are dedicated to your well-being.</p>
+                    <a href="/service" class="btn-explore">Explore Our Services</a>
+                </div>
+            </section>
+            <section class="hero1">
+                <div class="hero-content1">
+                    
+                    <h1>Committed to Your Health, Caring for Your Future</h1>
+                    <h3>1️⃣ "Your Health, Our Commitment – 24/7 Care, When You Need It Most."</h3>
+                    <p>We provide world-class medical care with cutting-edge technology and a compassionate touch.  
+                    Your health is our priority, and we’re here for you 24/7, offering the best in diagnostics, treatment, and patient care.</p>
+                    <h3>2️⃣ "Healing with Compassion, Leading with Innovation."</h3>
+                    <p>Combining advanced technology with personalized care to provide the best medical services for you and your loved ones.</p>
+                    <h3>3️⃣ "Excellence in Healthcare, Because You Deserve the Best."</h3>
+                    <p>From diagnostics to recovery, we offer top-tier medical services with world-class doctors and cutting-edge facilities.</p>
+                    <h3>4️⃣ "Saving Lives, Restoring Hope – One Patient at a Time."</h3>
+                    <p>Our dedicated medical team is here to provide compassionate care and life-saving treatments when it matters most.</p>
+                    <h3>5️⃣ "Redefining Healthcare with Precision, Passion, and Care."</h3>
+                    <p>We go beyond treatment – we focus on your well-being with advanced medical solutions and a human touch.</p>
+                    <a href="/home" class="btn-explore1">Explore Our Website</a>
+                </div>
+            </section>
+
+
+            <section class="about-section text-blue-500">
+                <div class="vision-mission">
+                    <div class="vision">
+                        <a href="/hospitalpart" class="cell occupied">
+                            <img class="im" src="../assets/Hospital1.jpg" alt="Vision">
+                          </a>
+                        <h3>J.P. Multi Speciality Hospital</h3>
+                        <p>Offering treatment across various specialties, including gynecology, neurology, and general medicine.</p>
+                    </div>
+                    <div class="mission">
+                        <a href="/hospitalpart" class="cell occupied">
+                            <img src="../assets/Hospital2.jpg" alt="Mission">
+                          </a>
+                        <h3>Pulse Hospital</h3>
+                        <p>Specialties: Known for its cardiology department, particularly its flat panel Cath lab (unique in Bhagalpur).
+                             Offers services in various fields like cardiovascular surgery, 
+                             laparoscopy, gynecology, etc.</p>
+                    </div>
+                </div>
+
+                <div class="other-values">
+                    <div class="saved-lives">
+                        <a href="/hospitalpart" class="cell occupied">
+                            <img src="../assets/WhatsApp Image 2024-09-07 at 13.53.14_aa56fd10.jpg" alt="Saved Lives">
+                          </a>
+                       
+                        <h3>City Star Multispeciality Hospital</h3>
+                        <p>Multispeciality: Offers a broad spectrum of specialties, including general medicine,
+                             internal medicine, orthopedics, gynecology, cardiology, pediatrics, and more.</p>
+                    </div>
+                    <div class="transparency">
+                        <a href="/hospitalpart" class="cell occupied">
+                            <img src="../assets/images/rectangle_481.png" alt="Transparency">
+                          </a>
+                        <h3> CGlocal Hospital</h3>
+                        <p>Specialties: Focuses on critical care and trauma management, 
+                            along with general medicine, surgery, and other essential services.</p>
+                    </div>
+                </div>
+            </section>
+              <!-- Content Section -->
+
+              <section class="content1">
+                <div class="image-row">
+                  <div class="image-container" data-address="123 Heart St, New York, NY">
+                    <div class="overlay-text">Cardiothoracic Surgery</div>
+                    <div class="address-tooltip">123 Heart St, New York, NY</div>
+                </div>
+                <div class="image-container" data-address="45 Ortho Lane, Los Angeles, CA">
+                    <div class="overlay-text">Orthopedic Surgery</div>
+                    <div class="address-tooltip">45 Ortho Lane, Los Angeles, CA</div>
+                </div>
+                <div class="image-container" data-address="67 Reconstruct Ave, Chicago, IL">
+                    <div class="overlay-text">Plastic and Reconstructive Surgery</div>
+                    <div class="address-tooltip">67 Reconstruct Ave, Chicago, IL</div>
+                </div>
+                <div class="image-container" data-address="89 General Blvd, Houston, TX">
+                    <div class="overlay-text">General Surgery</div>
+                    <div class="address-tooltip">89 General Blvd, Houston, TX</div>
+                </div>
+                <div class="image-container" data-address="22 Neuro Way, Miami, FL">
+                    <div class="overlay-text">Neurosurgery</div>
+                    <div class="address-tooltip">22 Neuro Way, Miami, FL</div>
+                </div>
+                <div class="image-container" data-address="10 Eye Care St, San Francisco, CA">
+                    <div class="overlay-text">Ophthalmic Surgery</div>
+                    <div class="address-tooltip">10 Eye Care St, San Francisco, CA</div>
+                </div>      
+                </div>
+            </section>  
+            
+          
+        </main>
+        
+    </div> 
+
+    <footer>
+        <div class="footer-content">
+            <div class="telephone-section">
+                     <h1 class="contact">Contact-us.</h1>
+                <div class="tel">
+                    <img class="telp" src="../assets/telephone.jpeg" alt="Telephone">
+                    <p>(+254) 717 783 146</p>
+                </div>
+            
+                <!-- Social Media Icons -->
+                <div class="social-media">
+                    
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/+254717783146" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+        <div class="paragraph">
+            <h1 class="ambulance">Ambulance-service.</h1>
+            <i class="fa fa-ambulance" aria-hidden="true"></i>
+              <p>+91-9170879945,<br> +91-9170879976 <br>+91-9167876543</p>
+        </div>
+        
+            <div class="footer-paragraph">
+                <h1 class="location">Link.</h1>
+               <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/service">Services</a></li>
+                <li><a href="/docter">Doctors</a></li>
+                <li><a href="/haspit">Hospitals</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/signup">SignUp</a></li>
+                <li><a href="/signin">SignIn</a></li>
+                <li><a href="/otp">Otp</a></li>
+                <li><a href="./details">Details</a></li>
+               </ul>
+           </div>
+
+           <div class="footer-paragraph">
+            <h1 class="location">Location-track.</h1>
+           <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <h3>IIIT Bhagalpur</h3>
+          <p>College of Engineering Campus, Sabour,<br> Bhagalpur, Bihar 813210</p>
+       </div>
+        </div>
+    </footer>
+</body>
+</html>

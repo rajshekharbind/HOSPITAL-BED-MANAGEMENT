@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e8faff;
+}
+header {
+    background-color: #d0f1f7;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #d0f1f7;
+}
+
+.emergency,
+.contact-info {
+    color: #008080;
+    font-size: 14px;
+}
+
+.telp {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.tel {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #32c1e9;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #00796b;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 20px;
+  }
+.navbar a.active,
+.navbar a:hover {
+  background-color: #004d40;
+  color: white;
+}
+.navbar .logo img {
+    height: 50px;
+
+}
+.t{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+   contact-between: space-between;
+}
+.search-icon{
+    width:30px;
+    height:30px; 
+    display: flex;
+    gap: 15px;
+   space-between:12px;
+   border-radius:50%;
+}
+.appointment-btn {
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: #000;
+   
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius:10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#search-input {
+    padding: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#search-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    //background-color: #b3e5fc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.appointment-btn {
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px 20px;
+    background-color:#333333;
+}
+
+.form-section {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+form-section p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.google-btn, .facebook-btn {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 45%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.google-btn:hover, .facebook-btn:hover {
+    background-color: #f0f0f0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.remember-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remember-section a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.remember-section a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    background-color: #2cd338;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background-color: #24b22f;
+}
+
+.form-section p {
+    text-align: center;
+}
+
+.form-section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.form-section a:hover {
+    text-decoration: underline;
+}
+
+.image-section img {
+    .image-section img {
+        width: 850px;
+        height: 600px;
+        border-radius:60px;
+    }
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    min-height: 100px;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.footer paragraph{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* Flexbox layout for footer-content */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribute space between left and right sections */
+    align-items: center; /* Center vertically */
+}
+
+.telephone-section {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align content to the left */
+}
+.contact{
+    color: #fff; /* White text for headings */
+    text-align: center;  /* Center-align the heading */
+    font-size: 2em;  /* Increase the size for emphasis */
+    font-weight: bold;  /* Bold text for added impact */
+    //text-transform: uppercase;  /* Uppercase letters for a bold appearance */
+    letter-spacing: 1px;  /* Slightly increase letter spacing */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Add a subtle shadow for depth */
+    margin-top: 50px;  /* Add top margin to give space */
+    margin-bottom: 20px; 
+    
+}
+
+.tel {
+    display: flex;
+    align-items: center; /* Center the telephone content vertically */
+    margin-left:50px;
+}
+
+.telp {
+    width: 30px; /* Set the width of the telephone icon */
+    height: 30px; /* Set the height of the telephone icon */
+    margin-right: 10px; /* Space between the icon and the phone number */
+}
+
+.social-media {
+    margin-top: 10px; /* Space between the telephone section and the social icons */
+    display: flex;
+    gap: 15px; /* Space between icons */
+    margin-left:50px;
+}
+
+.social-media a {
+    color: white;/* Icon color */
+    font-size: 24px; /* Adjust the size of the icons */
+    text-decoration: none; /* Remove the underline */
+}
+
+.social-media a:hover {
+    color: #1da1f2; /* Twitter blue color when hovered */
+}
+ .location{
+    color: #fff;  White text for headings */
+   text-align: center;  /* Center-align the heading */
+    font-size: 2em;  /* Increase the size for emphasis */
+   font-weight: bold;  /* Bold text for added impact */
+   // text-transform: uppercase;  /* Uppercase letters for a bold appearance */
+    letter-spacing: 1px;  /* Slightly increase letter spacing */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Add a subtle shadow for depth */
+    margin-top: 0px;  /* Add top margin to give space */
+   margin-bottom: 2px;
+  
+} 
+.footer-paragraph {
+    text-align: center;
+    margin-top: 20px;
+}
+.footer-paragraph a{
+    color:white;
+}
+
+.footer-paragraph h3 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.footer-paragraph p {
+    color: #fff;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Icon styling */
+.footer-paragraph i {
+    font-size: 2em;
+    color: #ff5722; /* Orange color for map icon */
+    margin-right: 10px;
+}
+
+.ambulance{
+    color: #fff;  White text for headings */
+   text-align: center;  /* Center-align the heading */
+    font-size: 2em;  /* Increase the size for emphasis */
+   font-weight: bold;  /* Bold text for added impact */
+   // text-transform: uppercase;  /* Uppercase letters for a bold appearance */
+    letter-spacing: 1px;  /* Slightly increase letter spacing */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Add a subtle shadow for depth */
+    margin-top: 0px;  /* Add top margin to give space */
+   margin-bottom: 2px;
+  
+} 
+.paragraph {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.paragraph h3 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.paragraph p {
+    color: #fff;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Icon styling */
+ .paragraph i {
+    font-size: 2em;
+    color: #ff5722; /* Orange color for map icon */
+    margin-right: 10px;
+} 
+

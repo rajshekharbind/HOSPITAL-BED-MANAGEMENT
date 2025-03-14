@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swasthya Kiran - Hospital Management</title>
+  <link rel="stylesheet" href="hospitalpart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img class="t" src="../assets/images/image_2.png" alt="Swasthya Kiran Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/service">Services</a></li>
+                <li><a href="/docter">Doctors</a></li>
+                <li><a href="/haspit">Hospitals</a></li>
+                <li><a href="/about">About Us</a></li>
+                <!-- <li><a href="/signup">SignUp</a></li>
+                <li><a href="/signin">SignIn</a></li>
+                <li><a href="/otp">Otp</a></li>
+                <li><a href="./details">Details</a></li> -->
+                <img class="search-icon" src="../assets/seatch.jpeg" alt="Search">
+            </ul>
+            <!-- <a href="#" class="appointment-btn">Appointment</a> -->
+            
+            <!-- Search Form (Initially hidden) -->
+            <div class="search-form" style="display: none;">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-btn" onclick="performSearch()">Search</button>
+            </div>
+        </nav>
+    </header>
+<script>
+    document.querySelector('.search-icon').addEventListener('click', function() {
+    var searchForm = document.querySelector('.search-form');
+    if (searchForm.style.display === 'none' || searchForm.style.display === '') {
+        searchForm.style.display = 'flex'; // Show the search form
+    } else {
+        searchForm.style.display = 'none'; // Hide the search form
+    }
+});
+
+// Function to perform search (for now it just logs the input)
+function performSearch() {
+    var query = document.getElementById('search-input').value;
+    if (query) {
+        console.log('Searching for: ' + query);
+        // Add your search logic here
+    } else {
+        alert('Please enter a search term');
+    }
+}
+
+</script>   
+
+  <main>
+    <section class="hospital-info">
+      <img class="hosp" src="../assets/Hospital1.jpg" alt="Sri Ram Hospital">
+      <div>
+        <h2>Sri Ram Hospital</h2>
+        <p>About: Sri Ram Hospital is located in Gurunanakpura Colony of Bhagalpur. The hospital has a rich record<br>Sriram Hospital (Registered as Sriram Medicare Centre) is committed to providing efficient, <br>effective and timely healthcare to its patients, through the best medical support in a clean and hygienic environment....</p>
+        <p><strong>Phone Number:</strong> 086780 03330</p>
+        <p><strong>Website:</strong> <a href="https://www.sriramhospital.co.in" target="_blank">www.sriramhospital.co.in</a></p>
+        <p><strong>Opens:</strong> 24 X 7</p>
+      </div>
+    </section>
+
+    <section class="departments">
+        <h3>General Wards</h3>
+        <div class="grid">
+          <a href="general-ward-image1.jpg" class="cell occupied">
+            <img src="general-ward-image1.jpg" alt="General Ward Image 1">
+          </a>
+          <a href="general-ward-image2.jpg" class="cell available">
+            <img src="general-ward-image2.jpg" alt="General Ward Image 2">
+          </a>
+          <a href="general-ward-image3.jpg" class="cell discharging">
+            <img src="general-ward-image3.jpg" alt="General Ward Image 3">
+          </a>
+          <a href="general-ward-image1.jpg" class="cell occupied">
+            <img src="general-ward-image1.jpg" alt="General Ward Image 1">
+          </a>
+          <a href="general-ward-image2.jpg" class="cell available">
+            <img src="general-ward-image2.jpg" alt="General Ward Image 2">
+          </a>
+          <a href="general-ward-image3.jpg" class="cell discharging">
+            <img src="general-ward-image3.jpg" alt="General Ward Image 3">
+          </a>
+        </div>
+        
+      
+        <h3>Emergency Departments</h3>
+        <div class="grid">
+          <a href="emergency-ward-image1.jpg" class="cell occupied">
+            <img src="emergency-ward-image1.jpg" alt="Emergency Ward Image 1">
+          </a>
+          <a href="emergency-ward-image2.jpg" class="cell available">
+            <img src="emergency-ward-image2.jpg" alt="Emergency Ward Image 2">
+          </a>
+          <a href="emergency-ward-image3.jpg" class="cell discharging">
+            <img src="emergency-ward-image3.jpg" alt="Emergency Ward Image 3">
+          </a>
+          <a href="emergency-ward-image1.jpg" class="cell occupied">
+            <img src="emergency-ward-image1.jpg" alt="Emergency Ward Image 1">
+          </a>
+          <a href="emergency-ward-image2.jpg" class="cell available">
+            <img src="emergency-ward-image2.jpg" alt="Emergency Ward Image 2">
+          </a>
+          <a href="emergency-ward-image3.jpg" class="cell discharging">
+            <img src="emergency-ward-image3.jpg" alt="Emergency Ward Image 3">
+          </a>
+        </div>
+      
+        <h3>Special Departments</h3>
+        <div class="grid">
+          <a href="special-ward-image1.jpg" class="cell occupied">
+            <img src="special-ward-image1.jpg" alt="Special Ward Image 1">
+          </a>
+          <a href="special-ward-image2.jpg" class="cell available">
+            <img src="special-ward-image2.jpg" alt="Special Ward Image 2">
+          </a>
+          <a href="special-ward-image3.jpg" class="cell discharging">
+            <img src="special-ward-image3.jpg" alt="Special Ward Image 3">
+          </a>
+          <a href="special-ward-image3.jpg" class="cell discharging">
+            <img src="special-ward-image3.jpg" alt="Special Ward Image 3">
+          </a>
+          <a href="special-ward-image1.jpg" class="cell occupied">
+            <img src="special-ward-image1.jpg" alt="Special Ward Image 1">
+          </a>
+          <a href="special-ward-image3.jpg" class="cell discharging">
+            <img src="special-ward-image3.jpg" alt="Special Ward Image 3">
+          </a>
+        </div>
+      
+        <h3>OPDs</h3>
+        <div class="grid opd">
+          <a href="opd-slot1.jpg" class="cell opd-slot">
+            <img src="opd-slot1.jpg" alt="OP1">
+            <span>OP1</span>
+          </a>
+          <a href="opd-slot2.jpg" class="cell opd-slot">
+            <img src="opd-slot2.jpg" alt="OP2">
+            <span>OP2</span>
+          </a>
+          <a href="opd-slot3.jpg" class="cell opd-slot">
+            <img src="opd-slot3.jpg" alt="OP3">
+            <span>OP3</span>
+          </a>
+            <a href="opd-slot1.jpg" class="cell opd-slot">
+                <img src="opd-slot1.jpg" alt="OP1">
+                <span>OP1</span>
+              </a>
+              <a href="opd-slot2.jpg" class="cell opd-slot">
+                <img src="opd-slot2.jpg" alt="OP2">
+                <span>OP2</span>
+              </a>
+              <a href="opd-slot3.jpg" class="cell opd-slot">
+                <img src="opd-slot3.jpg" alt="OP3">
+                <span>OP3</span>
+              </a>
+        </div>
+      </section>
+      
+  </main>
+
+     
+  <footer>
+    <div class="footer-content">
+        <div class="telephone-section">
+                 <h1 class="contact">Contact-us.</h1>
+            <div class="tel">
+                <img class="telp" src="../assets/telephone.jpeg" alt="Telephone">
+                <p>(+254) 717 783 146</p>
+            </div>
+        
+            <!-- Social Media Icons -->
+            <div class="social-media">
+                
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://wa.me/+254717783146" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        
+    <div class="paragraph">
+        <h1 class="ambulance">Ambulance-service.</h1>
+        <i class="fa fa-ambulance" aria-hidden="true"></i>
+          <p>+91-9170879945,<br> +91-9170879976 <br>+91-9167876543</p>
+    </div>
+    
+        <div class="footer-paragraph">
+            <h1 class="location">Link.</h1>
+           <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/service">Services</a></li>
+            <li><a href="/docter">Doctors</a></li>
+            <li><a href="/haspit">Hospitals</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/signup">SignUp</a></li>
+            <li><a href="/signin">SignIn</a></li>
+            <li><a href="/otp">Otp</a></li>
+            <li><a href="./details">Details</a></li>
+           </ul>
+       </div>
+
+       <div class="footer-paragraph">
+        <h1 class="location">Location-track.</h1>
+       <i class="fa fa-map-marker" aria-hidden="true"></i>
+      <h3>IIIT Bhagalpur</h3>
+      <p>College of Engineering Campus, Sabour,<br> Bhagalpur, Bihar 813210</p>
+   </div>
+    </div>
+</footer>
+</body>
+</html>
+
