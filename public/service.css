@@ -279,7 +279,7 @@ color: white;
   }
   
   footer {
-    background-color: #000000;
+    background-color: #333;
     color: white;
     padding: 20px;
     min-height: 100px;
@@ -899,5 +899,211 @@ li:hover {
   .information::after {
     height: 2px;
     bottom: -2px;
+  }
+}
+/* Mobile Responsive Media Queries */
+@media (max-width: 768px) {
+  /* Header & Navigation */
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Search Container */
+  .search-container {
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  .search-form {
+    position: static;
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  /* Hero Section */
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  /* Services Section */
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  /* Profile Cards */
+  .container {
+    flex-direction: column;
+  }
+
+  .profile-card {
+    width: 90%;
+  }
+
+  /* Accordion */
+  .container1 {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .accordion-item {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tel, .social-media {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .contact, .location, .ambulance {
+    font-size: 1.5rem;
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Smaller Screen Adjustments */
+  body {
+    font-size: 14px;
+  }
+
+  .navbar .logo img {
+    height: 40px;
+  }
+
+  /* Hero Section */
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Profile Cards */
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-header img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Accordion */
+  .accordion-content ul {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer Text */
+  .footer-paragraph h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-paragraph p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet Optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .profile-card {
+    width: 45%;
+  }
+
+  .search-form {
+    right: -150px;
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: more) {
+  .navbar {
+    border-bottom: 2px solid black;
+  }
+
+  .nav-links a {
+    text-decoration: underline;
+  }
+}
+
+/* Touch Target Optimization */
+@media (pointer: coarse) {
+  .nav-links a,
+  .btn,
+  .appointment-btn,
+  .profile-buttons button {
+    min-height: 44px;
+    padding: 12px 24px;
+  }
+
+  .search-icon {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Landscape Orientation */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .service-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 45%;
   }
 }

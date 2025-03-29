@@ -197,11 +197,12 @@ aside {
     justify-content: center;
     display: flex;
     width:60%;
+    background-color:#eef7ff;
     
 }
 .doctors-list {
    
-    background-color: white;
+    background-color:#eef7ff;
     padding: 20px;
     //border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -245,7 +246,7 @@ img {
 }
 
 footer {
-    background-color: #000000;
+    background-color: #333;
     color: white;
     padding: 20px;
     min-height: 100px;
@@ -415,7 +416,7 @@ footer {
 section.doctor-section {
     display: flex;
     align-items: center;
-    background: #fff;
+    background-color:#eef7ff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -456,3 +457,242 @@ section.doctor-section {
     color: #555;
     padding: 5px 0;
 }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    background-color:#eef7ff;
+}
+
+/* Image Styling */
+.image-container {
+    flex: 1;
+    max-width: 250px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Styling */
+.content {
+    flex: 2;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container {
+        max-width: 200px;
+    }
+}
+/* Mobile Responsive Media Queries */
+@media (max-width: 768px) {
+    /* Header and Navigation */
+    .header-top {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    /* Dashboard Layout */
+    .dashboard-container {
+      flex-direction: column;
+      padding: 15px;
+    }
+  
+    aside {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .doctors-list {
+      width: 100%;
+      height: auto;
+      overflow-x: auto;
+    }
+  
+    /* Table Adjustments */
+    table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  
+    th, td {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    /* Doctor Section */
+    section.doctor-section {
+      flex-direction: column;
+      margin: 10px;
+      padding: 15px;
+    }
+  
+    .doctor-image {
+      width: 150px;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  
+    /* Footer Adjustments */
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .tel, .social-media {
+      margin-left: 0;
+      justify-content: center;
+    }
+  
+    .contact, .location, .ambulance {
+      font-size: 1.5rem;
+      margin: 15px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Smaller Screen Adjustments */
+    body {
+      font-size: 14px;
+    }
+  
+    .navbar .logo img {
+      height: 40px;
+    }
+  
+    .para {
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+      padding: 10px;
+    }
+  
+    .rat {
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    /* Form Elements */
+    .appointment-btn, .remove-btn {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+  
+    /* Image Adjustments */
+    img {
+      width: 60px;
+    }
+  
+    .nm {
+      padding: 15px;
+      margin: 10px;
+    }
+  
+    /* Footer Text Sizes */
+    .footer-paragraph h3 {
+      font-size: 1.2rem;
+    }
+  
+    .footer-paragraph p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Tablet Landscape Optimization */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .dashboard-container {
+      flex-wrap: wrap;
+    }
+  
+    aside {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .doctors-list {
+      width: 100%;
+    }
+  }
+  
+  /* Accessibility Improvements */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+    }
+  }
+  
+  /* High Contrast Mode */
+  @media (prefers-contrast: more) {
+    .navbar {
+      border-bottom: 2px solid black;
+    }
+  
+    .nav-links a {
+      text-decoration: underline;
+    }
+  }
+  
+  /* Touch Target Optimization */
+  @media (pointer: coarse) {
+    .nav-links a,
+    .appointment-btn,
+    .remove-btn {
+      min-height: 44px;
+      padding: 12px 20px;
+    }
+  }

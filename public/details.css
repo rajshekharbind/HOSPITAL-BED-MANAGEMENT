@@ -265,7 +265,7 @@ color: white;
   }
   
   footer {
-    background-color: #000000;
+    background-color: #333;
     color: white;
     padding: 20px;
     min-height: 100px;
@@ -409,15 +409,177 @@ color: white;
     margin-right: 10px;
 } 
 
+/* Mobile-First Media Queries */
+@media (max-width: 768px) {
+  /* Header and Navigation */
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
 
-/* .detail{
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  border: 5px solid white; /* Adds a clean white border */
- // background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff5e62); 
- // padding: 5px; 
-} */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search-form {
+    width: 100%;
+    margin: 10px 0;
+    justify-content: center;
+  }
+
+  /* Main Container */
+  .container {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .user-info img {
+    margin-left: 0;
+  }
+
+  /* Form Adjustments */
+  form {
+    flex-direction: column;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  /* Footer Adjustments */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tel, .social-media {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .contact, .location, .ambulance {
+    font-size: 1.5rem;
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Smaller Screen Adjustments */
+  body {
+    font-size: 14px;
+  }
+
+  .navbar .logo img {
+    height: 40px;
+  }
+
+  .user-info img {
+    width: 100px;
+    height: 90px;
+  }
+
+  .menu li {
+    margin-bottom: 10px;
+  }
+
+  .active-case-btn {
+    padding: 8px 15px;
+  }
+
+  /* Form Elements */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .register-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  /* Footer Text Sizes */
+  .footer-paragraph h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-paragraph p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet Landscape Optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: more) {
+  .navbar {
+    border-bottom: 2px solid black;
+  }
+
+  .menu li a {
+    text-decoration: underline;
+  }
+}
+
+/* Touch Target Optimization */
+@media (pointer: coarse) {
+  .menu li a,
+  .active-case-btn,
+  .register-btn {
+    min-height: 44px;
+    padding: 12px 20px;
+  }
+
+  .nav-links a {
+    padding: 10px 15px;
+  }
+}
+
+/* Landscape Orientation */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .container {
+    padding: 10px;
+  }
+
+  .sidebar {
+    padding: 15px;
+  }
+}
+
+
 

@@ -279,7 +279,7 @@ p {
 }
 
 footer {
-    background-color: #000000;
+    background-color: #333;
     color: white;
     padding: 20px;
     min-height: 100px;
@@ -869,3 +869,199 @@ footer {
     }
 }
 
+/* Mobile Responsive Media Queries */
+@media (max-width: 768px) {
+    /* Header & Navigation */
+    .header-top {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .search-container {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+    }
+  
+    /* Hero Sections */
+    .hero, .hero1 {
+      height: auto;
+      padding: 60px 20px;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1.2rem;
+    }
+  
+    .hero-content1 h1 {
+      font-size: 1.8rem;
+    }
+  
+    /* Content Sections */
+    .dashboard-container {
+      flex-direction: column;
+      padding: 15px;
+    }
+  
+    aside {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .about-section {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .vision-mission, .other-values {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .vision, .mission, .saved-lives, .transparency {
+      width: 100%;
+    }
+  
+    /* Image Grid */
+    .image-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .image-container {
+      width: 100%;
+      height: auto;
+    }
+  
+    /* Footer */
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .tel, .social-media {
+      margin-left: 0;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Smaller Screen Adjustments */
+    body {
+      font-size: 14px;
+    }
+  
+    .navbar .logo img {
+      height: 40px;
+    }
+  
+    /* Hero Sections */
+    .hero h1 {
+      font-size: 1.8rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .hero-content1 h1 {
+      font-size: 1.5rem;
+    }
+  
+    /* Forms and Buttons */
+    .appointment-btn, #search-btn {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+  
+    /* Footer Text */
+    .contact, .location, .ambulance {
+      font-size: 1.5rem;
+    }
+  
+    .footer-paragraph h3 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Tablet Optimization */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .dashboard-container {
+      flex-wrap: wrap;
+    }
+  
+    aside {
+      width: 30%;
+    }
+  
+    .about-section {
+      width: 65%;
+      margin-left: 5%;
+    }
+  }
+  
+  /* Accessibility Improvements */
+  @media (prefers-reduced-motion: reduce) {
+    .image-container {
+      transition: none;
+    }
+    
+    .btn:hover::after {
+      animation: none;
+    }
+  }
+  
+  /* High Contrast Mode */
+  @media (prefers-contrast: more) {
+    .navbar {
+      border-bottom: 2px solid black;
+    }
+  
+    .nav-links a {
+      text-decoration: underline;
+    }
+  }
+  
+  /* Touch Target Optimization */
+  @media (pointer: coarse) {
+    .nav-links a,
+    .appointment-btn,
+    .btn-explore {
+      min-height: 44px;
+      padding: 12px 24px;
+    }
+  
+    #search-input {
+      min-height: 44px;
+    }
+  }
+  
+  /* Landscape Orientation */
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    .hero, .hero1 {
+      padding: 40px 20px;
+    }
+  
+    .image-row {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }

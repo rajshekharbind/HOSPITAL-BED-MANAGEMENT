@@ -336,7 +336,7 @@ html, body {
   }
   
   footer {
-    background-color: #000000;
+    background-color: #333;
     color: white;
     padding: 20px;
     min-height: 100px;
@@ -543,3 +543,193 @@ html, body {
     background: #0056b3;
   }
   
+  /* Mobile-First Media Queries */
+@media (max-width: 768px) {
+  /* Header & Navigation */
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Hero Section */
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+    background-attachment: scroll;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  /* Hospital Info Section */
+  .hospital-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hospital-info img {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  /* Departments Grid */
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .cell {
+    width: 25vw;
+    height: 25vw;
+    min-width: 80px;
+    min-height: 80px;
+  }
+
+  /* Footer Adjustments */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .telephone-section {
+    align-items: center;
+  }
+
+  .tel, .social-media {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .contact, .location, .ambulance {
+    font-size: 1.5rem;
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Smaller Screen Adjustments */
+  body {
+    font-size: 14px;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .btn-appointment {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  /* Hero Section */
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Grid Adjustments */
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Footer Text */
+  .footer-paragraph h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-paragraph p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet Optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hospital-info img {
+    width: 300px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  .btn::after {
+    animation: none;
+  }
+  
+  .grid a img {
+    transition: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: more) {
+  .navbar {
+    border-bottom: 2px solid black;
+  }
+
+  .nav-links a {
+    text-decoration: underline;
+  }
+}
+
+/* Touch Target Optimization */
+@media (pointer: coarse) {
+  .nav-links a,
+  .btn-appointment,
+  .btn {
+    min-height: 44px;
+    padding: 12px 24px;
+  }
+
+  .cell {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* Landscape Orientation */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hospital-info {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .hospital-info img {
+    width: 50%;
+    margin-bottom: 0;
+  }
+}

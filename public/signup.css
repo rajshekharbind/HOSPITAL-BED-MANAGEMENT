@@ -239,7 +239,7 @@ form input {
 }
 
 footer {
-    background-color: #000000;
+    background-color: #333;
     color: white;
     padding: 20px;
     min-height: 100px;
@@ -383,3 +383,175 @@ footer {
     margin-right: 10px;
 } 
 
+/* Mobile Responsive Media Queries */
+@media (max-width: 768px) {
+    /* Header & Navigation */
+    .header-top {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    /* Search Container */
+    .search-container {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  
+    .search-form {
+      position: static;
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    /* Main Content Container */
+    .container {
+      flex-direction: column;
+      margin: 20px 10px;
+    }
+  
+    .form-section {
+      width: 90%;
+      margin-bottom: 30px;
+    }
+  
+    .image-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+  
+    /* Footer */
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .tel, .social-media {
+      margin-left: 0;
+      justify-content: center;
+    }
+  
+    .contact, .location, .ambulance {
+      font-size: 1.5rem;
+      margin: 15px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Smaller Screen Adjustments */
+    body {
+      font-size: 14px;
+    }
+  
+    .navbar .logo img {
+      height: 40px;
+    }
+  
+    /* Form Elements */
+    .social-login {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .google-btn, .facebook-btn {
+      width: 100%;
+    }
+  
+    form input {
+      padding: 12px;
+    }
+  
+    /* Footer Text */
+    .footer-paragraph h3 {
+      font-size: 1.2rem;
+    }
+  
+    .footer-paragraph p {
+      font-size: 0.9rem;
+    }
+  
+    .contact, .location, .ambulance {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Tablet Optimization */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+      flex-wrap: wrap;
+    }
+  
+    .form-section {
+      width: 45%;
+    }
+  
+    .image-section img {
+      width: 90%;
+      height: auto;
+    }
+  }
+  
+  /* Accessibility Improvements */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+    }
+    
+    .create-account-btn:hover {
+      transform: none;
+    }
+  }
+  
+  /* High Contrast Mode */
+  @media (prefers-contrast: more) {
+    .navbar {
+      border-bottom: 2px solid black;
+    }
+  
+    .nav-links a {
+      text-decoration: underline;
+    }
+  }
+  
+  /* Touch Target Optimization */
+  @media (pointer: coarse) {
+    .nav-links a,
+    .appointment-btn,
+    .create-account-btn {
+      min-height: 44px;
+      padding: 12px 24px;
+    }
+  
+    .search-icon {
+      width: 44px;
+      height: 44px;
+    }
+  }
+  
+  /* Landscape Orientation */
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    .container {
+      flex-direction: row;
+      gap: 15px;
+    }
+  
+    .form-section {
+      width: 50%;
+    }
+  }

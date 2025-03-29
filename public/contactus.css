@@ -343,7 +343,7 @@ html, body {
     }
   }
   footer {
-    background-color: #000000;
+    background-color: #333;
     color: white;
     padding: 20px;
     min-height: 100px;
@@ -687,5 +687,202 @@ body {
   }
   .image-container {
       width: 80%;
+  }
+}
+/* Mobile First Approach - Base Styles Already in Place */
+
+/* Tablet View (768px and below) */
+@media (max-width: 768px) {
+  /* Header Adjustments */
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Navigation */
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Search Form */
+  .search-form {
+    margin-right: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Hero Section */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Contact Form */
+  .contact-form-box {
+    width: 90%;
+    margin-right: 0;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 0;
+  }
+
+  /* Image Grid */
+  .image-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container {
+    width: 80%;
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tel, .social-media {
+    margin-left: 0;
+    justify-content: center;
+  }
+}
+
+/* Mobile View (480px and below) */
+@media (max-width: 480px) {
+  /* Header */
+  .emergency, .contact-info {
+    font-size: 12px;
+  }
+
+  /* Navigation */
+  .navbar .logo img {
+    height: 40px;
+  }
+
+  /* Hero Section */
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Contact Form */
+  .contact-form-box {
+    padding: 15px;
+  }
+
+  .contact-form-box h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Address Sections */
+  .adress h1, .number h1, .email h1 {
+    font-size: 1.2rem;
+  }
+
+  .adress p, .number p, .email p {
+    font-size: 1rem;
+  }
+
+  /* Footer Text */
+  .contact, .location, .ambulance {
+    font-size: 1.5rem;
+  }
+
+  .footer-paragraph h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Image Grid */
+  .image-container {
+    width: 100%;
+    height: 200px;
+  }
+
+  .overlay-text {
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile View (360px and below) */
+@media (max-width: 360px) {
+  /* Navigation */
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  /* Buttons */
+  .appointment-btn, .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  /* Contact Form */
+  .contact-form-box h1 {
+    font-size: 1.3rem;
+  }
+
+  /* Footer */
+  .contact, .location, .ambulance {
+    font-size: 1.2rem;
+  }
+}
+
+/* Landscape Orientation Adjustments */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .image-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .image-container {
+    width: 45%;
+    height: 200px;
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  .image-container {
+    transition: none;
+  }
+  
+  .btn:hover::after {
+    animation: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: more) {
+  .navbar {
+    border-bottom: 2px solid black;
+  }
+  
+  .btn {
+    border: 2px solid black;
   }
 }

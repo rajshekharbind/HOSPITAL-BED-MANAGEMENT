@@ -130,3 +130,108 @@
       align-items: stretch;
     }
   }
+
+  /* Existing styles remain the same */
+
+/* Mobile-First Optimization */
+@media (max-width: 480px) {
+  body {
+    background-attachment: scroll;
+    background-size: auto 100%;
+  }
+
+  .appointment-section {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 25px 15px;
+    border-radius: 5px;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .form-group input[type='date'] {
+    background-size: 15px;
+    background-position: right 5px center;
+  }
+}
+
+/* Tablet Optimization */
+@media (min-width: 481px) and (max-width: 768px) {
+  .appointment-section {
+    max-width: 80%;
+    margin: 30px auto;
+  }
+
+  .container h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Enhanced Touch Targets */
+@media (pointer: coarse) {
+  .btn {
+    padding: 14px 20px;
+    min-height: 48px;
+  }
+
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+  }
+}
+
+/* Landscape Mobile Optimization */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .appointment-section {
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  .form-group {
+    margin-bottom: 8px;
+  }
+}
+
+/* High-Contrast Mode Support */
+@media (prefers-contrast: more) {
+  input,
+  select,
+  textarea {
+    border: 2px solid #000;
+  }
+
+  .btn {
+    border: 2px solid #000;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+
+  .reset-btn1:hover {
+    transform: none;
+  }
+}

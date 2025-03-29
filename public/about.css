@@ -1,41 +1,43 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color:F5F5F5;
-    color: #333;
+  background-color: #F5F5F5;
+  color: #333;
 }
+
 .header-top {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #d0f1f7;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #d0f1f7;
 }
 
 .emergency,
 .contact-info {
-    color: #008080;
-    font-size: 14px;
+  color: #008080;
+  font-size: 14px;
 }
-.telp{
-    width:20px;
-  height:20px; 
-  border-radius:50%;
 
+.telp {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }
-.tel{
-    display:flex;
+
+.tel {
+  display: flex;
 }
+
 .social-media {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
-/* Navbar Styling */
 /* Navbar Styling */
 .navbar {
   display: flex;
@@ -43,9 +45,10 @@ body {
   justify-content: space-between;
   padding: 10px 20px;
   background-color: #32c1e9;
-  margin-top:5px;
-  margin-bottom:5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
+
 .navbar a {
   text-decoration: none;
   color: #00796b;
@@ -53,20 +56,23 @@ body {
   padding: 5px;
   border-radius: 20px;
 }
+
 .navbar a.active,
 .navbar a:hover {
-background-color: #004d40;
-color: white;
+  background-color: #004d40;
+  color: white;
 }
+
 .navbar .logo img {
   height: 50px;
+}
 
+.t {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
-.t{
-  width:100px;
-  height:100px;
-  border-radius:50%;
-}
+
 .nav-links {
   display: flex;
   gap: 20px;
@@ -77,14 +83,14 @@ color: white;
   text-decoration: none;
   color: #ffffff;
   font-weight: bold;
- contact-between: space-between;
 }
+
 /* Search Container */
 .search-container {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 20px; /* Space between search icon and links */
+  gap: 20px;
 }
 
 /* Search Icon */
@@ -93,14 +99,14 @@ color: white;
   height: 30px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-  border-radius:50%;
-  margin-right:500px;
+  border-radius: 50%;
+  margin-right: 500px;
 }
 
 /* Search Form (Initially Hidden) */
 .search-form {
   position: absolute;
-  right: -220px; /* Moves the search box to the right */
+  right: -220px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -110,9 +116,9 @@ color: white;
   border: 2px solid black;
   opacity: 0;
   visibility: hidden;
-  transform: translateX(50px); /* Initially pushed out */
+  transform: translateX(50px);
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
-  margin-right:400px;
+  margin-right: 400px;
 }
 
 /* Show search bar when active */
@@ -129,11 +135,6 @@ color: white;
   border: none;
   border-radius: 5px;
   width: 180px;
-  padding: 8px;
-  font-size: 14px;
-  border: none;
-  border-radius: 5px;
-  width: 180px;
   outline: none;
   background-color: white;
   color: black;
@@ -141,15 +142,13 @@ color: white;
 
 /* Search Button */
 #search-btn {
- 
-
   padding: 8px 15px;
-    font-size: 14px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+  font-size: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 /* Appointment Button */
@@ -192,6 +191,53 @@ color: white;
       width: 100%;
   }
 }
+
+/* Additional Media Query for Mobile Users */
+@media screen and (max-width: 480px) {
+  .header-top {
+      flex-direction: column;
+      text-align: center;
+      padding: 5px;
+  }
+
+  .navbar {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      gap: 5px;
+  }
+
+  .search-container {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+
+  .search-icon {
+      margin-right: 0;
+  }
+
+  .search-form {
+      position: static;
+      width: 100%;
+      justify-content: center;
+  }
+
+  #search-input {
+      width: 90%;
+  }
+
+  .appointment-btn {
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+  }
+}
+
 
 
 
@@ -652,7 +698,7 @@ body {
   
 
 footer {
-    background-color: #000000;
+    background-color: #333;
     color: white;
     padding: 20px;
     min-height: 100px;
@@ -793,3 +839,174 @@ footer {
     margin-right: 10px;
 } 
 
+/* Existing CSS remains the same */
+
+/* Add these media queries at the bottom */
+
+/* Dashboard Responsive */
+@media screen and (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  aside {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .about-section {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .vision-mission, .other-values {
+    flex-direction: column;
+  }
+
+  .vision, .mission, .saved-lives, .transparency {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .user-profile img {
+    margin-left: 0;
+    width: 120px;
+    height: 100px;
+  }
+}
+
+/* Founder Story Responsive */
+@media screen and (max-width: 768px) {
+  .founder-story {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .founder-story .content h2 {
+    font-size: 1.8rem;
+  }
+
+  .founder-story .image img {
+    max-width: 80%;
+  }
+}
+
+/* People & Culture Responsive */
+@media screen and (max-width: 768px) {
+  .people-culture {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .people-culture .content h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Services Responsive */
+@media screen and (max-width: 768px) {
+  .services h1 {
+    font-size: 1.8rem;
+  }
+
+  .services p {
+    font-size: 1rem;
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Footer Responsive */
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .telephone-section {
+    align-items: center;
+  }
+
+  .tel {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .social-media {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .contact, .location, .ambulance {
+    font-size: 1.5rem;
+  }
+}
+
+/* Additional Mobile Optimization */
+@media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .content2 {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .left-bg1, .right-content {
+    width: 100%;
+  }
+
+  .right-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .stats-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .stat-item {
+    min-width: 150px;
+    padding: 15px;
+  }
+
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+
+  .footer-paragraph h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-paragraph p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet Optimization */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .nav-links {
+    gap: 15px;
+  }
+
+  .search-form {
+    margin-right: 300px;
+  }
+
+  .dashboard-container {
+    padding: 15px;
+  }
+
+  .about-section {
+    margin-left: 50px;
+  }
+}
